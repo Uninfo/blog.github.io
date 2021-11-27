@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#0078E7"><meta name="author" content="毋忘草"><meta name="copyright" content="毋忘草"><meta name="generator" content="Hexo 5.4.0"><meta name="theme" content="hexo-theme-yun"><title>利用 CMD 远程结束进程 | 毋忘草的小岛</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-markdown-css@0.1.24/dist/yun/yun-markdown.min.css"><script src="//at.alicdn.com/t/font_1140697_j5gk85dg4pf.js" async></script><script src="https://cdn.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>document.addEventListener("DOMContentLoaded", () => {
+  [".post-card",".post-content img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+});
+</script><link class="aplayer-style-marker" rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script class="aplayer-script-marker" src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" defer></script><script class="meting-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js" defer></script><link id="light-prism-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@latest/themes/prism.css" media="(prefers-color-scheme: light)"><link id="dark-prism-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@latest/themes/prism-tomorrow.css" media="(prefers-color-scheme: dark)"><link rel="icon" href="/yun.svg"><link rel="mask-icon" href="/yun.svg" color="#0078E7"><link rel="alternate icon" href="/yun.ico"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="preload" href="/js/utils.js" as="script"><link rel="preload" href="/js/hexo-theme-yun.js" as="script"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><script id="yun-config">
+    const Yun = window.Yun || {};
+    window.CONFIG = {"hostname":"www.myosotis.xin","root":"/","title":"毋忘草的小岛","version":"1.6.1","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）"},"anonymous_image":"https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg","say":{"api":"https://v1.hitokoto.cn","hitokoto":true},"local_search":{"path":"/search.xml"},"fireworks":{"colors":["102, 167, 221","62, 131, 225","33, 78, 194"]}};
+  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/utils.js"></script><script src="/js/hexo-theme-yun.js"></script><link rel="alternate" href="/atom.xml" title="毋忘草的小岛" type="application/atom+xml"><meta name="description" content="温馨提示：需要做好一下准备，为了保证实验顺利进行需要保证“靶机”关闭防火墙。  收集靶机信息：  IP address for info User for info Password for info">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用 CMD 远程结束进程">
+<meta property="og:url" content="https://www.myosotis.xin/2019/07/26/one-commands/index.html">
+<meta property="og:site_name" content="毋忘草的小岛">
+<meta property="og:description" content="温馨提示：需要做好一下准备，为了保证实验顺利进行需要保证“靶机”关闭防火墙。  收集靶机信息：  IP address for info User for info Password for info">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-07-26T13:30:56.000Z">
+<meta property="article:modified_time" content="2019-07-25T18:34:18.000Z">
+<meta property="article:author" content="毋忘草">
+<meta property="article:tag" content="Cmd">
+<meta name="twitter:card" content="summary"><script src="/js/ui/mode.js"></script></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="文章目录"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="毋忘草"><img width="96" loading="lazy" src="/yun.png" alt="毋忘草"></a><div class="site-author-name"><a href="/about/">毋忘草</a></div><span class="site-name">毋忘草的小岛</span><sub class="site-subtitle"></sub><div class="site-desciption"></div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">18</span></a></div><div class="site-state-item"><a href="/categories/" title="分类"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-2-line"></use></svg></span><span class="site-state-item-count">11</span></a></div><div class="site-state-item"><a href="/tags/" title="标签"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="site-state-item-count">16</span></a></div><a class="site-state-item hty-icon-button" href="/albums/" title="相册"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-gallery-line"></use></svg></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/Uninfo" title="GitHub" target="_blank" style="color:#6e5494"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://twitter.com/lvxiangy0920" title="Twitter" target="_blank" style="color:#1da1f2"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-twitter-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="mailto:lvxiangy0920@qq.com" title="E-Mail" target="_blank" style="color:#8E71C1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-genderless-line"></use></svg></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-contrast-2-line"></use></svg></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">查看进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%88%E6%AD%A2%E8%BF%9B%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">终止进程</span></a></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article"><link itemprop="mainEntityOfPage" href="https://www.myosotis.xin/2019/07/26/one-commands/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="毋忘草"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="毋忘草的小岛"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">利用 CMD 远程结束进程</h1><div class="post-meta"><div class="post-time" style="display:block"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span> <time title="创建时间：2019-07-26 21:30:56" itemprop="dateCreated datePublished" datetime="2019-07-26T21:30:56+08:00">2019-07-26</time></div><span class="post-count"><span class="post-symbolcount"><span class="post-meta-item-icon" title="本文字数"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-file-word-line"></use></svg></span> <span title="本文字数">796</span><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读时长"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-timer-line"></use></svg></span> <span title="阅读时长">3m</span></span></span><span class="post-meta-divider">-</span><a href="#comment"><span class="post-meta-item-icon" title="评论数"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-chat-3-line"></use></svg> <span class="waline-comment-count" id="/2019/07/26/one-commands/"></span></span></a><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-line"></use></svg></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/" style="--text-color:var(--hty-text-color)" itemprop="url" rel="index"><span itemprop="text">小试牛刀</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/Cmd/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">Cmd</span></a></span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body" style="--smc-primary:#0078E7;"><blockquote>
+<p> 温馨提示：需要做好一下准备，为了保证实验顺利进行需要保证“靶机”关闭防火墙。</p>
+<p> 收集靶机信息：</p>
+<ol>
+<li>IP address for info</li>
+<li>User for info</li>
+<li>Password for info</li>
+</ol>
+</blockquote>
+<hr>
+<span id="more"></span>
+
+<h3 id="查看进程"><a href="#查看进程" class="headerlink" title="查看进程"></a>查看进程</h3><pre class="language-cmd" data-language="cmd"><code class="language-cmd">
+TASKLIST [&#x2F;S system [&#x2F;U username [&#x2F;P [password]]]]
+         [&#x2F;M [module] | &#x2F;SVC | &#x2F;V] [&#x2F;FI filter] [&#x2F;FO format] [&#x2F;NH]
+
+描述:
+    该工具显示在本地或远程机器上当前运行的进程列表。
+
+
+参数列表:
+   &#x2F;S     system           指定连接到的远程系统。
+
+   &#x2F;U     [domain\]user    指定应该在哪个用户上下文执行这个命令。
+
+   &#x2F;P     [password]       为提供的用户上下文指定密码。如果省略，则
+                           提示输入。
+
+   &#x2F;M     [module]         列出当前使用所给 exe&#x2F;dll 名称的所有任务。
+                           如果没有指定模块名称，显示所有加载的模块。
+
+   &#x2F;SVC                    显示每个进程中主持的服务。
+
+   &#x2F;APPS 显示 Microsoft Store 应用及其关联的进程。
+
+   &#x2F;V                      显示详细任务信息。
+
+   &#x2F;FI    filter           显示一系列符合筛选器
+                           指定条件的任务。
+
+   &#x2F;FO    format           指定输出格式。
+                           有效值: &quot;TABLE&quot;、&quot;LIST&quot;、&quot;CSV&quot;。
+
+   &#x2F;NH                     指定列标题不应该
+                           在输出中显示。
+                           只对 &quot;TABLE&quot; 和 &quot;CSV&quot; 格式有效。
+
+   &#x2F;?                      显示此帮助消息。
+
+
+例如:
+    TASKLIST
+    TASKLIST &#x2F;M
+    TASKLIST &#x2F;V &#x2F;FO CSV
+    TASKLIST &#x2F;SVC &#x2F;FO LIST
+    TASKLIST &#x2F;APPS &#x2F;FI &quot;STATUS eq RUNNING&quot;
+    TASKLIST &#x2F;M wbem*
+    TASKLIST &#x2F;S system &#x2F;FO LIST
+    TASKLIST &#x2F;S system &#x2F;U 域\用户名 &#x2F;FO CSV &#x2F;NH
+#   TASKLIST &#x2F;S system &#x2F;U username &#x2F;P password &#x2F;FO TABLE &#x2F;NH
+    TASKLIST &#x2F;FI &quot;USERNAME ne NT AUTHORITY\SYSTEM&quot; &#x2F;FI &quot;STATUS eq running&quot;</code></pre>
+
+
+
+<h3 id="终止进程"><a href="#终止进程" class="headerlink" title="终止进程"></a>终止进程</h3><pre class="language-cmd" data-language="cmd"><code class="language-cmd">
+TASKKILL [&#x2F;S system [&#x2F;U username [&#x2F;P [password]]]]
+         &#123; [&#x2F;FI filter] [&#x2F;PID processid | &#x2F;IM imagename] &#125; [&#x2F;T] [&#x2F;F]
+
+描述:
+    使用该工具按照进程 ID (PID) 或映像名称终止任务。
+
+参数列表:
+    &#x2F;S    system           指定要连接的远程系统。
+
+    &#x2F;U    [domain\]user    指定应该在哪个用户上下文执行这个命令。
+
+    &#x2F;P    [password]       为提供的用户上下文指定密码。如果忽略，提示
+                           输入。
+
+    &#x2F;FI   filter           应用筛选器以选择一组任务。
+                           允许使用 &quot;*&quot;。例如，映像名称 eq acme*
+
+    &#x2F;PID  processid        指定要终止的进程的 PID。
+                           使用 TaskList 取得 PID。
+
+    &#x2F;IM   imagename        指定要终止的进程的映像名称。通配符 &#39;*&#39;可用来
+                           指定所有任务或映像名称。
+
+    &#x2F;T                     终止指定的进程和由它启用的子进程。
+
+    &#x2F;F                     指定强制终止进程。
+
+    &#x2F;?                     显示帮助消息。
+
+
+例如:
+    TASKKILL &#x2F;IM notepad.exe
+    &#x2F;&#x2F;终止影响名称“notepad.exe”进程；
+    TASKKILL &#x2F;PID 1230 &#x2F;PID 1241 &#x2F;PID 1253 &#x2F;T
+    TASKKILL &#x2F;F &#x2F;IM cmd.exe &#x2F;T 
+    TASKKILL &#x2F;F &#x2F;FI &quot;PID ge 1000&quot; &#x2F;FI &quot;WINDOWTITLE ne untitle*&quot;
+    TASKKILL &#x2F;F &#x2F;FI &quot;USERNAME eq NT AUTHORITY\SYSTEM&quot; &#x2F;IM notepad.exe
+    TASKKILL &#x2F;S system &#x2F;U 域\用户名 &#x2F;FI &quot;用户名 ne NT*&quot; &#x2F;IM *
+    TASKKILL &#x2F;S system &#x2F;U username &#x2F;P password &#x2F;FI &quot;IMAGENAME eq note*&quot;
+#   TASKKILL &#x2F;S system &#x2F;U username &#x2F;P password &#x2F;IM &quot;explorer.exe&quot; &#x2F;F &#x2F;T 
+    &#x2F;&#x2F;强制终止远程用户“explorer.exe”进程和它由启用的子进程。</code></pre></div><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>毋忘草</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="https://www.myosotis.xin/2019/07/26/one-commands/" title="利用 CMD 远程结束进程">https://www.myosotis.xin/2019/07/26/one-commands/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a> 许可协议。</li></ul></section></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/2019/10/16/bt-ftp1/" rel="prev" title="利用 Frp 内网穿透 KCP 模式做跳板，让你访问更加顺畅（海外版）"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-left-s-line"></use></svg><span class="post-nav-text">利用 Frp 内网穿透 KCP 模式做跳板，让你访问更加顺畅（海外版）</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/2019/07/22/network-commands/" rel="next" title="“黄叹号”网络分析"><span class="post-nav-text">“黄叹号”网络分析</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div class="hty-card" id="comment"><div class="comment-tooltip text-center"><span>要不要和我说些什么？</span><br><a class="hty-button hty-button--raised" id="github-discussions" target="_blank" rel="noopener" href="https://github.com/Uninfo/blog.github.io/discussions/1">GitHub Discussions</a></div><div id="waline"></div><script>Yun.utils.getScript("https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js", () => {
+  const walineConfig = {"enable":"ture","serverURL":{"visitor":true},"comment":true,"el":"#waline","lang":"zh-CN"}
+  walineConfig.path = "/2019/07/26/one-commands/"
+  new Waline(walineConfig)
+}, window.Waline);</script></div></main><footer class="sidebar-translate" id="footer"><div class="beian"><a rel="noopener" href="https://beian.miit.gov.cn/" target="_blank">豫ICP备2020025813号</a></div><div class="copyright"><span>&copy; 2019 – 2021 </span><span class="with-love" id="animate"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author"> 毋忘草</span></div><div class="powered"><span>由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v5.4.0</span><span class="footer-separator">|</span><span>主题 - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.6.1</span></div><div class="live_time"><span>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
+  setTimeout(blog_live_time, 1000);
+  const start = new Date('2019-09-20T00:00:00');
+  const now = new Date();
+  const timeDiff = (now.getTime() - start.getTime());
+  const msPerMinute = 60 * 1000;
+  const msPerHour = 60 * msPerMinute;
+  const msPerDay = 24 * msPerHour;
+  const passDay = Math.floor(timeDiff / msPerDay);
+  const passHour = Math.floor((timeDiff % msPerDay) / 60 / 60 / 1000);
+  const passMinute = Math.floor((timeDiff % msPerHour) / 60 / 1000);
+  const passSecond = Math.floor((timeDiff % msPerMinute) / 1000);
+  display_live_time.innerHTML = " " + passDay + " 天 " + passHour + " 小时 " + passMinute + " 分 " + passSecond + " 秒";
+}
+blog_live_time();
+</script></div><div class="footer-support"><span>本网站由</span><a class="footer-support-logo" href="https://www.upyun.com/?utm_source=lianmeng&amp;utm_medium=referral" target="blank" title="又拍云"><img height="30" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/logo/upyun-logo.png" alt="又拍云"></a><span>提供 CDN 加速</span></div></footer><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-up-s-line"></use></svg><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#0078E7" stroke-width="2" stroke-linecap="round"></circle></svg></a><a class="popup-trigger hty-icon-button icon-search" id="search" href="javascript:;" title="搜索"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-search-line"></use></svg></span></a><script>window.addEventListener("DOMContentLoaded", () => {
+  // Handle and trigger popup window
+  document.querySelector(".popup-trigger").addEventListener("click", () => {
+    document.querySelector(".popup").classList.add("show");
+    setTimeout(() => {
+      document.querySelector(".search-input").focus();
+    }, 100);
+  });
+
+  // Monitor main search box
+  const onPopupClose = () => {
+    document.querySelector(".popup").classList.remove("show");
+  };
+
+  document.querySelector(".popup-btn-close").addEventListener("click", () => {
+    onPopupClose();
+  });
+
+  window.addEventListener("keyup", event => {
+    if (event.key === "Escape") {
+      onPopupClose();
+    }
+  });
+});
+</script><script src="/js/search/local-search.js" defer></script><div class="popup search-popup"><div class="search-header"><span class="popup-btn-close close-icon hty-icon-button"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-close-line"></use></svg></span></div><div class="search-input-container"><input class="search-input" id="local-search-input" type="text" placeholder="搜索..." value=""></div><div id="local-search-result"></div></div></div></body></html>

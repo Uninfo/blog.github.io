@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>毋忘草的小岛</title>
+  
+  
+  <link href="https://www.myosotis.xin/atom.xml" rel="self"/>
+  
+  <link href="https://www.myosotis.xin/"/>
+  <updated>2021-08-25T14:41:29.108Z</updated>
+  <id>https://www.myosotis.xin/</id>
+  
+  <author>
+    <name>毋忘草</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo部署出现错误 Error: Spawn failed 解决方式</title>
+    <link href="https://www.myosotis.xin/2021/08/25/hexo-8%20-%20%E5%89%AF%E6%9C%AC/"/>
+    <id>https://www.myosotis.xin/2021/08/25/hexo-8%20-%20%E5%89%AF%E6%9C%AC/</id>
+    <published>2021-08-25T11:00:15.000Z</published>
+    <updated>2021-08-25T14:41:29.108Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><blockquote><p>Hexo部署出现一下错误err: Error: Spawn failed解决方式</p></blockquote><pre class="language-none"><code class="language-none">FATAL &#123;  err: Error: Spawn failed      at ChildProcess.&lt;anonymous&gt; (C:\Users\myosotis\Desktop\Hexo_blog\node_modules\hexo-util\lib\spawn.js:51:21)      at ChildProcess.emit (events.js:315:20)      at ChildProcess.cp.emit (C:\Users\myosotis\Desktop\Hexo_blog\node_modules\cross-spawn\lib\enoent.js:34:29)      at Process.ChildProcess._handle.onexit (internal&#x2F;child_process.js:277:12) &#123;    code: 128  &#125;&#125; Something&#39;s wrong. Maybe you can find the solution here: %s https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;troubleshooting.html</code></pre><span id="more"></span><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment">##进入站点根目录</span><span class="token comment">##删除git提交内容文件夹</span><span class="token function">rm</span> -rf .deploy_git/<span class="token comment">##执行</span><span class="token function">git</span> config --global core.autocrlf <span class="token boolean">false</span><span class="token comment">##最后</span>hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo d</code></pre><h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><blockquote><p>修改 _config.yml 文件，将配置地址http方式切换成ssh方式</p></blockquote><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment">##进入站点根目录</span><span class="token comment">##删除git提交内容文件夹</span><span class="token function">vim</span> _config.yml<span class="token comment">##修改</span>deploy:type: <span class="token function">git</span>repository: https://github.com/Uninfo/blog.github.io.git -<span class="token operator">></span> git@github.com:Uninfo/blog.github.io.gitbranch: master<span class="token comment">##最后</span>hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo d</code></pre><h3 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h3><blockquote><p>强制上传，不建议</p></blockquote><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment">##进入站点根目录</span><span class="token comment">##进入depoly文件夹</span><span class="token builtin class-name">cd</span> .deploy_git/<span class="token comment">##强制推送</span><span class="token function">git</span> push -f</code></pre>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Hexo部署出现一下错误err: Error: Spawn failed解决方式&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&quot;language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;FATAL &amp;#123;
+  err: Error: Spawn failed
+      at ChildProcess.&amp;lt;anonymous&amp;gt; (C:\Users\myosotis\Desktop\Hexo_blog\node_modules\hexo-util\lib\spawn.js:51:21)
+      at ChildProcess.emit (events.js:315:20)
+      at ChildProcess.cp.emit (C:\Users\myosotis\Desktop\Hexo_blog\node_modules\cross-spawn\lib\enoent.js:34:29)
+      at Process.ChildProcess._handle.onexit (internal&amp;#x2F;child_process.js:277:12) &amp;#123;
+    code: 128
+  &amp;#125;
+&amp;#125; Something&amp;#39;s wrong. Maybe you can find the solution here: %s https:&amp;#x2F;&amp;#x2F;hexo.io&amp;#x2F;docs&amp;#x2F;troubleshooting.html
+&lt;/code&gt;&lt;/pre&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://www.myosotis.xin/categories/Hexo/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo部署出现错误 Error: Spawn failed 解决方式</title>
+    <link href="https://www.myosotis.xin/2021/08/25/hexo-8/"/>
+    <id>https://www.myosotis.xin/2021/08/25/hexo-8/</id>
+    <published>2021-08-25T11:00:15.000Z</published>
+    <updated>2021-08-25T14:41:29.108Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><blockquote><p>Hexo部署出现一下错误err: Error: Spawn failed解决方式</p></blockquote><pre class="language-none"><code class="language-none">FATAL &#123;  err: Error: Spawn failed      at ChildProcess.&lt;anonymous&gt; (C:\Users\myosotis\Desktop\Hexo_blog\node_modules\hexo-util\lib\spawn.js:51:21)      at ChildProcess.emit (events.js:315:20)      at ChildProcess.cp.emit (C:\Users\myosotis\Desktop\Hexo_blog\node_modules\cross-spawn\lib\enoent.js:34:29)      at Process.ChildProcess._handle.onexit (internal&#x2F;child_process.js:277:12) &#123;    code: 128  &#125;&#125; Something&#39;s wrong. Maybe you can find the solution here: %s https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;troubleshooting.html</code></pre><span id="more"></span><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment">##进入站点根目录</span><span class="token comment">##删除git提交内容文件夹</span><span class="token function">rm</span> -rf .deploy_git/<span class="token comment">##执行</span><span class="token function">git</span> config --global core.autocrlf <span class="token boolean">false</span><span class="token comment">##最后</span>hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo d</code></pre><h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><blockquote><p>修改 _config.yml 文件，将配置地址http方式切换成ssh方式</p></blockquote><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment">##进入站点根目录</span><span class="token comment">##删除git提交内容文件夹</span><span class="token function">vim</span> _config.yml<span class="token comment">##修改</span>deploy:type: <span class="token function">git</span>repository: https://github.com/Uninfo/blog.github.io.git -<span class="token operator">></span> git@github.com:Uninfo/blog.github.io.gitbranch: master<span class="token comment">##最后</span>hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo d</code></pre><h3 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h3><blockquote><p>强制上传，不建议</p></blockquote><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment">##进入站点根目录</span><span class="token comment">##进入depoly文件夹</span><span class="token builtin class-name">cd</span> .deploy_git/<span class="token comment">##强制推送</span><span class="token function">git</span> push -f</code></pre>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Hexo部署出现一下错误err: Error: Spawn failed解决方式&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&quot;language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;FATAL &amp;#123;
+  err: Error: Spawn failed
+      at ChildProcess.&amp;lt;anonymous&amp;gt; (C:\Users\myosotis\Desktop\Hexo_blog\node_modules\hexo-util\lib\spawn.js:51:21)
+      at ChildProcess.emit (events.js:315:20)
+      at ChildProcess.cp.emit (C:\Users\myosotis\Desktop\Hexo_blog\node_modules\cross-spawn\lib\enoent.js:34:29)
+      at Process.ChildProcess._handle.onexit (internal&amp;#x2F;child_process.js:277:12) &amp;#123;
+    code: 128
+  &amp;#125;
+&amp;#125; Something&amp;#39;s wrong. Maybe you can find the solution here: %s https:&amp;#x2F;&amp;#x2F;hexo.io&amp;#x2F;docs&amp;#x2F;troubleshooting.html
+&lt;/code&gt;&lt;/pre&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://www.myosotis.xin/categories/Hexo/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Croc：一款安全性极强的点对点数据传输工具</title>
+    <link href="https://www.myosotis.xin/2021/08/24/hexo-6/"/>
+    <id>https://www.myosotis.xin/2021/08/24/hexo-6/</id>
+    <published>2021-08-24T15:12:24.000Z</published>
+    <updated>2021-08-25T11:28:09.883Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><blockquote><p>Croc是一款安全性极强的点对点（P2P）数据传输工具，该工具允许两台计算机设备以一种简单和安全的方式来传输文件或文件夹。简而言之，Croc是一款命令行接口工具，在Croc的帮助下，广大研究人员可以通过命令行工具来实现文件传输。</p></blockquote><span id="more"></span><h3 id="实战演示"><a href="#实战演示" class="headerlink" title="实战演示"></a>实战演示</h3><p><img src="https://yun.myosotis.xin/202108251925654.gif" loading="lazy"></p><h3 id="工具特性"><a href="#工具特性" class="headerlink" title="工具特性"></a>工具特性</h3><blockquote><ul><li>该工具允许任意两台计算机设备直接进行数据传输；</li><li>提供了端到端加密支持（PAKE）；</li><li>支持跨平台传输（Windows、Linux和macOS）；</li><li>支持多文件传输；</li><li>允许断线后的文件续传；</li><li>不需要本地服务器或端口转发；</li><li>支持IPv6和IPv4；</li><li>支持使用Tor之类的代理；</li></ul></blockquote><h3 id="工具安装"><a href="#工具安装" class="headerlink" title="工具安装"></a>工具安装</h3><blockquote><p><a href="https://github.com/schollz/croc">安装说明：https://github.com/schollz/croc</a></p><p><a href="https://github.com/schollz/croc/releases">下载跳转：https://github.com/schollz/croc/releases)</a></p></blockquote><h3 id="工具使用"><a href="#工具使用" class="headerlink" title="工具使用"></a>工具使用</h3><blockquote><p><strong>发送文件</strong>：多个文件，用文件与文件之间用【空格】隔开</p></blockquote><p><code>croc</code> <code>fend [file1路径] [file2文件路径] </code></p><pre class="language-none"><code class="language-none">croc fend date.text</code></pre><blockquote><p><strong>发送消息</strong>：–text  “hello world”</p></blockquote><pre class="language-none"><code class="language-none">croc fend --text  &quot;hello world&quot;</code></pre><blockquote><p><strong>自定义密码</strong>：-c “123456”</p></blockquote><pre class="language-cmd" data-language="cmd"><code class="language-cmd">croc fend -v 123456date.text###自定义123456密码发送文件date.textcroc fend -v 123456 --text  &quot;hello world&quot;###自定义123456密码发送消息</code></pre><blockquote><p><strong>设置中转</strong>：croc relay</p></blockquote><pre class="language-cmd" data-language="cmd"><code class="language-cmd">$ croc relay###设置中转服务器[info]  2021&#x2F;02&#x2F;16 11:38:59 starting croc relay version v8.6.7-05640cd[info]  2021&#x2F;02&#x2F;16 11:38:59 starting TCP server on 9010[info]  2021&#x2F;02&#x2F;16 11:38:59 starting TCP server on 9012[info]  2021&#x2F;02&#x2F;16 11:38:59 starting TCP server on 9009[info]  2021&#x2F;02&#x2F;16 11:38:59 starting TCP server on 9013[info]  2021&#x2F;02&#x2F;16 11:38:59 starting TCP server on 9011$ croc relay --ports 3001###开启指定服务端口[info]  2021&#x2F;02&#x2F;16 11:39:22 starting croc relay version v8.6.7-05640cd[info]  2021&#x2F;02&#x2F;16 11:39:22 starting TCP server on 3001</code></pre><pre class="language-cmd" data-language="cmd"><code class="language-cmd">$ croc --relay 127.0.0.1:3001 send###通过服务器中转发送文件</code></pre><blockquote><p>常用组合</p></blockquote><pre class="language-cmd" data-language="cmd"><code class="language-cmd">croc  --relay 127.0.0.1:3001  send  -c 123456  date.text###通过IP地址（127.0.0.1:3001）的3001端口，中转文件 date.texe  密码是123456croc  --relay 127.0.0.1:3001  send  -c 123456  --text  &quot;hello world&quot;###通过IP地址（127.0.0.1:3001）的3001端口，中转消息 &quot;hello world&quot;  密码是123456</code></pre>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Croc是一款安全性极强的点对点（P2P）数据传输工具，该工具允许两台计算机设备以一种简单和安全的方式来传输文件或文件夹。简而言之，Croc是一款命令行接口工具，在Croc的帮助下，广大研究人员可以通过命令行工具来实现文件传输。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="岛主推荐" scheme="https://www.myosotis.xin/categories/%E5%B2%9B%E4%B8%BB%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="本地P2P传输" scheme="https://www.myosotis.xin/categories/%E5%B2%9B%E4%B8%BB%E6%8E%A8%E8%8D%90/%E6%9C%AC%E5%9C%B0P2P%E4%BC%A0%E8%BE%93/"/>
+    
+    
+    <category term="本地P2P传输" scheme="https://www.myosotis.xin/tags/%E6%9C%AC%E5%9C%B0P2P%E4%BC%A0%E8%BE%93/"/>
+    
+    <category term="croc" scheme="https://www.myosotis.xin/tags/croc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>KMS激活Windows 📝</title>
+    <link href="https://www.myosotis.xin/2021/07/16/hexo-5/"/>
+    <id>https://www.myosotis.xin/2021/07/16/hexo-5/</id>
+    <published>2021-07-16T07:53:24.000Z</published>
+    <updated>2021-08-25T11:03:10.814Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><blockquote><p>Key Management Service（简称:KMS），这个功能是在Windows Vista之后的产品中的一种新型<a href="https://baike.baidu.com/item/%E4%BA%A7%E5%93%81%E6%BF%80%E6%B4%BB/3765451">产品激活</a>机制，目的是<a href="https://baike.baidu.com/item/Microsoft">Microsoft</a>更好的遏制非法软件授权行为(<a href="https://baike.baidu.com/item/%E7%9B%97%E7%89%88/1267303">盗版</a>)。</p></blockquote><blockquote><p>能够通过KMS进行激活的一般称为VL版,即<a href="https://baike.baidu.com/item/VOLUME/5018094">VOLUME</a>授权版，一般不会单独在零售市场进行发售，一般是直接向企业提供电子ISO映像进行批量授权安装，基于对KMS原理研究成果，我们可以自行搭建KMS激活服务器，实现每180天一次的自动激活，使得系统一直保持激活状态。</p></blockquote><span id="more"></span><h3 id="选择-KMS-密钥"><a href="#选择-KMS-密钥" class="headerlink" title="选择 KMS 密钥"></a>选择 KMS 密钥</h3><blockquote><ul><li>Windows 10教育版密钥<br><code>YNMGQ-8RYV3-4PGQ3-C8XTP-7CFBY</code><br><code>84NGF-MHBT6-FXBX8-QWJK7-DRR8H</code><br>  <code>96YNV-9X4RP-2YYKB-RMQH4-6Q72D</code></li><li>Windows 7企业版密钥<br><code>33PXH-7Y6KF-2VJC9-XBBR8-HVTHH</code><br><code>YDRBP-3D83W-TY26F-D46B2-XCKRJ</code><br><code>C29WB-22CC8-VJ326-GHFJW-H9DH4</code></li></ul></blockquote><h3 id="安装-更换-密钥"><a href="#安装-更换-密钥" class="headerlink" title="安装/更换 密钥"></a>安装/更换 密钥</h3><blockquote><ul><li><p><code>slmgr /ipk NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</code></p><p>安装产品密钥（替换现有密钥）</p></li><li><p><code>slmgr /skms kms.03k.org</code></p><p>进行设置，则将使用该 KMS 主机。</p></li><li><p><code>slmgr /ato </code></p><p>激活 Windows</p></li><li><p><code>slmgr /xpr</code></p><p>当前许可证状态的截止时间</p></li></ul></blockquote><hr><blockquote><p><strong>查看已安装的密钥</strong></p></blockquote><pre class="language-none"><code class="language-none">regedit计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatformBackupProductKeyDefault</code></pre><blockquote><p><strong>推荐kms的服务器</strong></p></blockquote><pre class="language-none"><code class="language-none">kms.03k.orgzh.us.to</code></pre>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Key Management Service（简称:KMS），这个功能是在Windows Vista之后的产品中的一种新型&lt;a href=&quot;https://baike.baidu.com/item/%E4%BA%A7%E5%93%81%E6%BF%80%E6%B4%BB/3765451&quot;&gt;产品激活&lt;/a&gt;机制，目的是&lt;a href=&quot;https://baike.baidu.com/item/Microsoft&quot;&gt;Microsoft&lt;/a&gt;更好的遏制非法软件授权行为(&lt;a href=&quot;https://baike.baidu.com/item/%E7%9B%97%E7%89%88/1267303&quot;&gt;盗版&lt;/a&gt;)。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;能够通过KMS进行激活的一般称为VL版,即&lt;a href=&quot;https://baike.baidu.com/item/VOLUME/5018094&quot;&gt;VOLUME&lt;/a&gt;授权版，一般不会单独在零售市场进行发售，一般是直接向企业提供电子ISO映像进行批量授权安装，基于对KMS原理研究成果，我们可以自行搭建KMS激活服务器，实现每180天一次的自动激活，使得系统一直保持激活状态。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>把系统装入U盘，实现随身携带</title>
+    <link href="https://www.myosotis.xin/2021/06/01/hexo-4/"/>
+    <id>https://www.myosotis.xin/2021/06/01/hexo-4/</id>
+    <published>2021-06-01T12:35:44.000Z</published>
+    <updated>2021-06-11T10:26:47.763Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><p><img src="https://yun.myosotis.xin/20210601204447.png" loading="lazy"></p><blockquote><p>本篇介绍看我如何使用VM虚拟机（VMware)，把系统装入U盘随身携带（<strong>Windows/Linxu To Go</strong>）。</p><p>需要准备：</p><ul><li><p>软件准备</p><ul><li><p><a href="https://dl.softmgr.qq.com/original/System/VMware-workstation-full_16.1.0_17198959.exe"><strong>VMware Workstation Pro</strong></a></p><p>密钥：<code>ZF3R0-FHED2-M80TY-8QYGC-NPKYF</code>、<code>YF390-0HF8P-M81RQ-2DXQE-M2UT6</code>、<code>ZF71R-DMX85-08DQY-8YMNC-PPHV8</code></p></li><li><p><a href="https://next.itellyou.cn/"><strong>ISO镜像</strong></a></p><p>进入选择一枚适合你的镜像⑧</p></li></ul></li><li><p>硬件准备</p><ul><li><p>一枚U盘</p><p>要求：<code>USB 3.0</code> ＋ <code>128GB</code> 的空间</p></li></ul></li></ul></blockquote><span id="more"></span><h3 id="创建虚拟机"><a href="#创建虚拟机" class="headerlink" title="创建虚拟机"></a>创建虚拟机</h3><blockquote><p>此处省略1万字…自行<a href="baidu.com">百度</a></p></blockquote><h3 id="创建划重点"><a href="#创建划重点" class="headerlink" title="创建划重点"></a>创建划重点</h3><blockquote><p><img src="https://yun.myosotis.xin/20210601204020.png" loading="lazy"></p><ul><li><strong>安装客户机操纵系统</strong>(勾选)<ul><li><input checked="" disabled="" type="checkbox"> 稍后安装操作系统(S)。</li></ul></li></ul></blockquote><hr><blockquote><p><img src="https://yun.myosotis.xin/20210601204033.png" loading="lazy"></p><ul><li><strong>选择客户机操纵系统</strong>(勾选)<ul><li><input disabled="" type="checkbox"> Microsoft Windows(W)</li><li><input checked="" disabled="" type="checkbox"> Linux(L)</li></ul></li></ul><p><em>勾选与你选用的镜像相符的选项，我这边选择Linxu（镜像是deepin）</em></p></blockquote><hr><blockquote><p><img src="https://yun.myosotis.xin/20210601204039.png" loading="lazy"></p><ul><li><strong>选择磁盘</strong>(勾选)<ul><li><input disabled="" type="checkbox"> 创建新的虚拟磁盘(V)</li><li><input disabled="" type="checkbox"> 使用现有的虚拟磁盘(E)</li><li><input checked="" disabled="" type="checkbox"> 使用物理磁盘(适用于高级用户)(P)</li></ul></li></ul><p><img src="https://yun.myosotis.xin/20210601204053.png" loading="lazy"></p><ul><li>选择物理磁盘<ul><li>设备(勾选)<ul><li><input disabled="" type="checkbox"> PhysicalDrivel0</li><li><input checked="" disabled="" type="checkbox"> PhysicalDrivel1</li></ul></li><li>使用情况(勾选)<ul><li><input checked="" disabled="" type="checkbox"> 使用整个磁盘(E)</li><li><input disabled="" type="checkbox"> 使用单个分区(P)</li></ul></li></ul></li></ul><p><em>在选择物理磁盘前  插入U盘，选择 PhysicalDrivel1 后使用整个磁盘</em></p></blockquote><p>以上是画出的重点，建立在最基础创建的基础，最主要就是（选择磁盘——使用物理磁盘）就可以安装成功。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://yun.myosotis.xin/20210601204447.png&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本篇介绍看我如何使用VM虚拟机（VMware)，把系统装入U盘随身携带（&lt;strong&gt;Windows/Linxu To Go&lt;/strong&gt;）。&lt;/p&gt;
+&lt;p&gt;需要准备：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;软件准备&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://dl.softmgr.qq.com/original/System/VMware-workstation-full_16.1.0_17198959.exe&quot;&gt;&lt;strong&gt;VMware Workstation Pro&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;密钥：&lt;code&gt;ZF3R0-FHED2-M80TY-8QYGC-NPKYF&lt;/code&gt;、&lt;code&gt;YF390-0HF8P-M81RQ-2DXQE-M2UT6&lt;/code&gt;、&lt;code&gt;ZF71R-DMX85-08DQY-8YMNC-PPHV8&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;https://next.itellyou.cn/&quot;&gt;&lt;strong&gt;ISO镜像&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;进入选择一枚适合你的镜像⑧&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;硬件准备&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;一枚U盘&lt;/p&gt;
+&lt;p&gt;要求：&lt;code&gt;USB 3.0&lt;/code&gt; ＋ &lt;code&gt;128GB&lt;/code&gt; 的空间&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    
+    <category term="deepin" scheme="https://www.myosotis.xin/tags/deepin/"/>
+    
+    <category term="Windows to go" scheme="https://www.myosotis.xin/tags/Windows-to-go/"/>
+    
+    <category term="Linux to go" scheme="https://www.myosotis.xin/tags/Linux-to-go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux_deepin篇</title>
+    <link href="https://www.myosotis.xin/2021/05/15/hexo-3/"/>
+    <id>https://www.myosotis.xin/2021/05/15/hexo-3/</id>
+    <published>2021-05-15T11:47:39.000Z</published>
+    <updated>2021-06-01T12:45:19.229Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><blockquote><p>有关小白入手Linux_Deepin，会遇到的问题都会在登记在这里面。</p><p><strong>这边挖个坑，下期更新使用虚拟机（VMware Workstation Pro）把系统安装到U盘里。</strong></p><p>本人已经成功通过虚拟机把系统安装到U盘，实现”Linux to go“。</p></blockquote><span id="more"></span><h2 id="Linux-deepin篇"><a href="#Linux-deepin篇" class="headerlink" title="Linux_deepin篇"></a>Linux_deepin篇</h2><h4 id="未插入网线"><a href="#未插入网线" class="headerlink" title="未插入网线"></a>未插入网线</h4><blockquote><p>启用网卡</p></blockquote><p><strong><code>infconfig -a</code></strong></p><p><strong><code>ifconfig ens33 upldown</code></strong></p><h4 id="系统更新锁"><a href="#系统更新锁" class="headerlink" title="系统更新锁"></a>系统更新锁</h4><blockquote><p>结束进程_方法一</p></blockquote><p><strong><code>ps -e | grep apt</code></strong></p><p><strong><code>sudo kill 11669</code></strong></p><p><strong><code>sudo kill 25379</code></strong></p><blockquote><p>删除文件_方法二</p></blockquote><p><strong><code>sudo  rm  -rf  /var/cache/apt/archives/lock   </code></strong></p><p><strong><code>sudo  rm  -rf  /var/lib/dpkg/lock  </code></strong></p><h4 id="文本编辑器"><a href="#文本编辑器" class="headerlink" title="文本编辑器"></a>文本编辑器</h4><blockquote><p>通过降级回到旧版解决无法输入中文问题</p></blockquote><p><strong><code>sudo apt install deepin-editor=5.6.1-1</code></strong></p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;有关小白入手Linux_Deepin，会遇到的问题都会在登记在这里面。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这边挖个坑，下期更新使用虚拟机（VMware Workstation Pro）把系统安装到U盘里。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;本人已经成功通过虚拟机把系统安装到U盘，实现”Linux to go“。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="小岛诊所" scheme="https://www.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/"/>
+    
+    <category term="Linux_deepin篇" scheme="https://www.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/Linux-deepin%E7%AF%87/"/>
+    
+    
+    <category term="deepin" scheme="https://www.myosotis.xin/tags/deepin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows_Pc篇</title>
+    <link href="https://www.myosotis.xin/2021/05/15/hexo-2/"/>
+    <id>https://www.myosotis.xin/2021/05/15/hexo-2/</id>
+    <published>2021-05-15T11:47:31.000Z</published>
+    <updated>2021-05-15T13:16:19.177Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h4 id="安装PowerToys"><a href="#安装PowerToys" class="headerlink" title="安装PowerToys"></a>安装PowerToys</h4><blockquote><p>微软超好用的集成工具（<a href="https://docs.microsoft.com/zh-cn/windows/powertoys/install"><strong>PowerToys</strong></a>）包括一下功能<strong>颜色选择器、FancyZones、文件资源管理器加载项、图像大小调整器、键盘管理器、PowerRename、PowerToys Run、快捷键指南等.</strong></p></blockquote><h4 id="temp缓存清除"><a href="#temp缓存清除" class="headerlink" title="temp缓存清除"></a>temp缓存清除</h4><blockquote><p>复制路径粘贴到文件路径 回车，后可直接清空temp下的所有文件</p><p><strong>%USERPROFILE%\AppData\Local\Temp</strong></p></blockquote><span id="more"></span>]]></content>
+    
+    
+    <summary type="html">&lt;h4 id=&quot;安装PowerToys&quot;&gt;&lt;a href=&quot;#安装PowerToys&quot; class=&quot;headerlink&quot; title=&quot;安装PowerToys&quot;&gt;&lt;/a&gt;安装PowerToys&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;微软超好用的集成工具（&lt;a href=&quot;https://docs.microsoft.com/zh-cn/windows/powertoys/install&quot;&gt;&lt;strong&gt;PowerToys&lt;/strong&gt;&lt;/a&gt;）包括一下功能&lt;strong&gt;颜色选择器、FancyZones、文件资源管理器加载项、图像大小调整器、键盘管理器、PowerRename、PowerToys Run、快捷键指南等.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;temp缓存清除&quot;&gt;&lt;a href=&quot;#temp缓存清除&quot; class=&quot;headerlink&quot; title=&quot;temp缓存清除&quot;&gt;&lt;/a&gt;temp缓存清除&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;复制路径粘贴到文件路径 回车，后可直接清空temp下的所有文件&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;%USERPROFILE%\AppData\Local\Temp&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="小岛诊所" scheme="https://www.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/"/>
+    
+    <category term="Windows篇" scheme="https://www.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/Windows%E7%AF%87/"/>
+    
+    
+    <category term="wintows优化" scheme="https://www.myosotis.xin/tags/wintows%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>浏览器_优化篇</title>
+    <link href="https://www.myosotis.xin/2021/05/15/hexo-1/"/>
+    <id>https://www.myosotis.xin/2021/05/15/hexo-1/</id>
+    <published>2021-05-15T11:47:21.000Z</published>
+    <updated>2021-05-15T13:24:59.514Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><blockquote><p>本篇记录主要edge浏览器的有趣的实验（<code>edge://flags/</code>）设置</p><p>例如：减少卡顿（优化性能）、多线程下载、夜间模式、QR生成器等等</p></blockquote><span id="more"></span><h2 id="edge浏览器"><a href="#edge浏览器" class="headerlink" title="edge浏览器"></a>edge浏览器</h2><h4 id="减少卡顿（优化性能）"><a href="#减少卡顿（优化性能）" class="headerlink" title="减少卡顿（优化性能）"></a>减少卡顿（优化性能）</h4><blockquote><p><em>设置禁用</em>（edge://flags/）</p><p><a href="edge://flags/#disable-accelerated-2d-canvas"><strong>Accelerated 2D canvas</strong></a><br><a href="edge://flags/#enable-gpu-rasterization"><strong>GPU rasterization</strong></a></p></blockquote><blockquote><p>设置-关闭<strong>使用硬件加速（如可用）</strong></p></blockquote><h4 id="多线程下载"><a href="#多线程下载" class="headerlink" title="多线程下载"></a>多线程下载</h4><blockquote><p><em>设置开启</em>（edge://flags/）</p><p><a href="edge://flags/#enable-parallel-downloading"><strong>Parallel downloading</strong></a></p></blockquote><h4 id="夜间模式"><a href="#夜间模式" class="headerlink" title="夜间模式"></a>夜间模式</h4><blockquote><p><em>设置开启</em>（edge://flags/）</p><p><a href="edge://flags/#enable-force-dark"><strong>Force Dark Mode for Web Contents</strong></a></p></blockquote><h4 id="QR生成器"><a href="#QR生成器" class="headerlink" title="QR生成器"></a>QR生成器</h4><blockquote><p><em>设置开启</em>（edge://flags/）</p><p><a href="edge://flags/#sharing-qr-code-generator"><strong>Enable sharing page via QR Code</strong></a></p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本篇记录主要edge浏览器的有趣的实验（&lt;code&gt;edge://flags/&lt;/code&gt;）设置&lt;/p&gt;
+&lt;p&gt;例如：减少卡顿（优化性能）、多线程下载、夜间模式、QR生成器等等&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="小岛诊所" scheme="https://www.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/"/>
+    
+    <category term="浏览器_优化篇" scheme="https://www.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/%E6%B5%8F%E8%A7%88%E5%99%A8-%E4%BC%98%E5%8C%96%E7%AF%87/"/>
+    
+    
+    <category term="edge" scheme="https://www.myosotis.xin/tags/edge/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>打印机_维修篇</title>
+    <link href="https://www.myosotis.xin/2021/05/15/hexo/"/>
+    <id>https://www.myosotis.xin/2021/05/15/hexo/</id>
+    <published>2021-05-15T10:55:22.000Z</published>
+    <updated>2021-05-15T13:12:30.484Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><blockquote><p>本篇记录我在生活中遇到的有关Windows，PC应用等设置，以及有趣的发现。会定期更新…</p><p>欢迎在下面留了言交流…</p></blockquote><h4 id="“打印机变灰色，取消脱机打印”"><a href="#“打印机变灰色，取消脱机打印”" class="headerlink" title="“打印机变灰色，取消脱机打印”"></a>“打印机变灰色，取消<strong>脱机打印</strong>”</h4><blockquote><p><em>操作步骤</em></p><p>1、右击选择<strong>查看现在正在打印什么</strong></p><p>2、打印机取勾<strong>脱机使用打印机</strong></p></blockquote><span id="more"></span>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本篇记录我在生活中遇到的有关Windows，PC应用等设置，以及有趣的发现。会定期更新…&lt;/p&gt;
+&lt;p&gt;欢迎在下面留了言交流…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&quot;“打印机变灰色，取消脱机打印”&quot;&gt;&lt;a href=&quot;#“打印机变灰色，取消脱机打印”&quot; class=&quot;headerlink&quot; title=&quot;“打印机变灰色，取消脱机打印”&quot;&gt;&lt;/a&gt;“打印机变灰色，取消&lt;strong&gt;脱机打印&lt;/strong&gt;”&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;操作步骤&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;1、右击选择&lt;strong&gt;查看现在正在打印什么&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;2、打印机取勾&lt;strong&gt;脱机使用打印机&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="小岛诊所" scheme="https://www.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/"/>
+    
+    <category term="Windows篇" scheme="https://www.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/Windows%E7%AF%87/"/>
+    
+    
+    <category term="脱机打印" scheme="https://www.myosotis.xin/tags/%E8%84%B1%E6%9C%BA%E6%89%93%E5%8D%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通过宝塔搭建 Frp，实现内网穿透（通用版）</title>
+    <link href="https://www.myosotis.xin/2019/10/16/bt-ftp/"/>
+    <id>https://www.myosotis.xin/2019/10/16/bt-ftp/</id>
+    <published>2019-10-16T09:21:05.000Z</published>
+    <updated>2021-05-12T13:35:49.826Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><blockquote><p>  利用 Frp 实现内网穿透，通过 mstsc 远程主机💻</p><p> 直奔主题，准备如下：</p><ol><li>公网IP: X.X.X.X（VPS）</li><li>内网IP: X.X.X.X</li><li>映射到公网的域名：xxx.com<br>  VPS是Linux系统，本地是win</li></ol></blockquote><hr><span id="more"></span><h1 id="搭建配置-Frps"><a href="#搭建配置-Frps" class="headerlink" title="搭建配置 Frps"></a>搭建配置 Frps</h1><h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p><img src="https://db.myosotis.xin/images/2019/10/16/Z1a72bjAJt/1571208171656.png" alt="1" loading="lazy"></p><h2 id="通用配置"><a href="#通用配置" class="headerlink" title="通用配置"></a>通用配置</h2><blockquote><p>监听地址：*填写IP地址或者域名地址，推荐填写域名地址（比较好记）</p></blockquote><blockquote><p>验证密码：*随便填写</p></blockquote><p><img src="https://db.myosotis.xin/images/2019/10/16/iekNSRDK5I/1571208634784.png" alt="2" loading="lazy"></p><h2 id="高级配置"><a href="#高级配置" class="headerlink" title="高级配置"></a>高级配置</h2><p><img src="https://db.myosotis.xin/images/2019/10/16/PNdk7aXCdI/1571209153584.png" alt="3" loading="lazy"></p><h2 id="仪表盘设置"><a href="#仪表盘设置" class="headerlink" title="仪表盘设置"></a>仪表盘设置</h2><blockquote><p>食用方法：[ip/域名]:7500</p></blockquote><blockquote><p>例子：<br>    1.1.1.1:7500<br>    xx.com:7500</p></blockquote><p><img src="https://db.myosotis.xin/images/2019/10/16/B5quX5zSDP/1571209329526.png" alt="4" loading="lazy"></p><h2 id="运行状态"><a href="#运行状态" class="headerlink" title="运行状态"></a>运行状态</h2><blockquote><p>当前状态：开启</p></blockquote><h1 id="安装食用-Frpc"><a href="#安装食用-Frpc" class="headerlink" title="安装食用 Frpc"></a>安装食用 Frpc</h1><p><a href="https://github.com/fatedier/frp/releases"><strong>其他版本</strong></a>|<a href="https://github.com/fatedier/frp/releases/download/v0.29.0/frp_0.29.0_windows_amd64.zip"><strong>Windows 系统</strong></a></p><h2 id="开始食用"><a href="#开始食用" class="headerlink" title="开始食用"></a>开始食用</h2><p>解压设置 <strong>frpc.ini</strong></p><pre class="language-ini" data-language="ini"><code class="language-ini"><span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">common</span><span class="token punctuation">]</span></span><span class="token key attr-name">server_addr</span> <span class="token punctuation">=</span> <span class="token value attr-value">0.0.0.0</span><span class="token key attr-name">server_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">7000</span><span class="token key attr-name">token</span> <span class="token punctuation">=</span> <span class="token value attr-value">12345678</span><span class="token key attr-name">tcp_mux</span> <span class="token punctuation">=</span> <span class="token value attr-value">true</span><span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">rdp</span><span class="token punctuation">]</span></span><span class="token key attr-name">type</span> <span class="token punctuation">=</span> <span class="token value attr-value">tcp</span><span class="token key attr-name">local_ip</span> <span class="token punctuation">=</span> <span class="token value attr-value">127.0.0.1</span>           <span class="token key attr-name">local_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">3389</span><span class="token key attr-name">remote_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">7001</span>  <span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">smb</span><span class="token punctuation">]</span></span><span class="token key attr-name">type</span> <span class="token punctuation">=</span> <span class="token value attr-value">tcp</span><span class="token key attr-name">local_ip</span> <span class="token punctuation">=</span> <span class="token value attr-value">127.0.0.1</span><span class="token key attr-name">local_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">445</span><span class="token key attr-name">remote_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">7002</span></code></pre><p>运行进入<strong>frpc.ini</strong>文件目录里</p><p><code>Shift + 右击</code> 选择 <code>S</code> 键</p><p><code> .\frpc.exe -c frpc.ini</code></p><h1 id="客户端自启（进阶篇）"><a href="#客户端自启（进阶篇）" class="headerlink" title="客户端自启（进阶篇）"></a>客户端自启（进阶篇）</h1><blockquote><p>同样的道理，我们也需要对客户端设置后台运行和开机自启。借助 winsw 工具可以将frpc注册为windows系统中的服务。</p></blockquote><p>仅下载 <strong>WinSW.NET2.exe</strong> 或者 <strong>WinSW.NET4.exe</strong>，它们之间人选其一便可。<a href="https://github.com/kohsuke/winsw/releases"><strong>下载地址</strong></a></p><p><strong>下载 winsw 最新版</strong>，为了方便将其<strong>重命名</strong>为<code>winsw.exe</code>, 将该文件和<code>frpc.exe</code>放在一起，然后<strong>新建</strong><code>winsw.xml</code>写入以下内容： </p><pre class="language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>service</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>Frp<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>Frp<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用 Frpc 发布本地电脑网站到外网/description>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>executable</span><span class="token punctuation">></span></span>frpc<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>executable</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>arguments</span><span class="token punctuation">></span></span>-c frpc.ini<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>arguments</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logmode</span><span class="token punctuation">></span></span>reset<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>logmode</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>service</span><span class="token punctuation">></span></span></code></pre><p> 然后使用<code>winsw install</code>和<code>frpc start</code>命令即可将 frpc 安装为系统服务。<br><code>win+r</code> 后通过<code>services.msc</code>进入到服务列表页面找到 frp 服务。 </p><p><img src="https://db.myosotis.xin/images/2019/10/16/oqImiNgFX1/5990755-e2077fe9512c8ca6.jpg" alt="5" loading="lazy"></p><p>确保frpc在连接失败后自动尝试重新连接，在恢复tap页进行如下设置：</p><p><img src="https://db.myosotis.xin/images/2019/10/16/os3XGu8ugQ/5990755-87c0941ef5c495fc.jpg" alt="6" loading="lazy"></p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;  利用 Frp 实现内网穿透，通过 mstsc 远程主机💻&lt;/p&gt;
+&lt;p&gt; 直奔主题，准备如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;公网IP: X.X.X.X（VPS）&lt;/li&gt;
+&lt;li&gt;内网IP: X.X.X.X&lt;/li&gt;
+&lt;li&gt;映射到公网的域名：xxx.com&lt;br&gt;  VPS是Linux系统，本地是win&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;</summary>
+    
+    
+    
+    <category term="小试牛刀" scheme="https://www.myosotis.xin/categories/%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/"/>
+    
+    
+    <category term="内网穿透" scheme="https://www.myosotis.xin/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用 Frp 内网穿透 KCP 模式做跳板，让你访问更加顺畅（海外版）</title>
+    <link href="https://www.myosotis.xin/2019/10/16/bt-ftp1/"/>
+    <id>https://www.myosotis.xin/2019/10/16/bt-ftp1/</id>
+    <published>2019-10-16T09:21:05.000Z</published>
+    <updated>2019-10-23T23:40:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><blockquote><p>   一些国外VPS因地理遥远，延迟高等因素，使用 Windows 的 3389 访问卡慢，又没有什么单向软件能让本地 3389 变成增强 TCP 发包模式，以改善访问的流畅度。<br>  本次使用Frp的内网穿透，Kcp模式，大概原理就是，国外 VPS 用 frpc 客户端对 3389 穿透使用 KCP 模式，转发数据到 Frps 服务端。然后 Frps 服务端往返协议传输给终端用户。<br>  跳板，当然就是找台国内VPS，或者新加坡/香港的低延迟当中继，用来搭建 Frp 服务端。宽带没啥要求，用来访问 3389 1M 都行。</p><p>  开坑预览：</p><ol><li>开坑<ol><li>Frp 服务端客户端搭建配置</li></ol></li><li>填坑<ol><li>时间同步</li><li>开放端口</li><li>后台运行</li></ol></li></ol></blockquote><hr><span id="more"></span><h1 id="开坑"><a href="#开坑" class="headerlink" title="开坑"></a>开坑</h1><h2 id="Frp-服务端客户端搭建配置"><a href="#Frp-服务端客户端搭建配置" class="headerlink" title="Frp 服务端客户端搭建配置"></a>Frp 服务端客户端搭建配置</h2><blockquote><p> Frp是一个可用于内网穿透的高性能的反向代理应用，支持TCP, UDP协议，为HTTP和HTTPS应用协议提供了额外的能力，且尝试性支持了点对点穿透。 </p><p>GitHub 项目发布页：<a href="https://github.com/fatedier/frp/releases"><strong>Download Frp</strong></a></p></blockquote><h2 id="服务端frps-ini配置"><a href="#服务端frps-ini配置" class="headerlink" title="服务端frps.ini配置"></a>服务端frps.ini配置</h2><pre class="language-ini" data-language="ini"><code class="language-ini"><span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">common</span><span class="token punctuation">]</span></span><span class="token key attr-name">bind_addr</span> <span class="token punctuation">=</span> <span class="token value attr-value">0.0.0.0</span><span class="token key attr-name">bind_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">7000</span><span class="token key attr-name">kcp_bind_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">7000</span><span class="token key attr-name">bind_udp_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">7001</span><span class="token key attr-name">dashboard_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">7500</span><span class="token key attr-name">token</span> <span class="token punctuation">=</span> <span class="token value attr-value">password</span><span class="token key attr-name">dashboard_user</span> <span class="token punctuation">=</span> <span class="token value attr-value">admin</span><span class="token key attr-name">dashboard_pwd</span> <span class="token punctuation">=</span> <span class="token value attr-value">admin</span><span class="token key attr-name">tcp_mux</span><span class="token punctuation">=</span><span class="token value attr-value">true</span><span class="token key attr-name">heartbeat_timeout</span> <span class="token punctuation">=</span> <span class="token value attr-value">90</span><span class="token key attr-name">authentication_timeout</span> <span class="token punctuation">=</span> <span class="token value attr-value">900</span></code></pre><p>注意服务端和客户端机器的世界是否一致。</p><p>7000 和 7001 端口开放TCP和UDP，KCP模式是通过UDP发包的。</p><h2 id="客户端frpc-ini配置"><a href="#客户端frpc-ini配置" class="headerlink" title="客户端frpc.ini配置"></a>客户端frpc.ini配置</h2><pre class="language-ini" data-language="ini"><code class="language-ini"><span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">common</span><span class="token punctuation">]</span></span><span class="token key attr-name">server_addr</span> <span class="token punctuation">=</span> <span class="token value attr-value">0.0.0.0</span><span class="token key attr-name">server_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">7000</span><span class="token key attr-name">protocol</span> <span class="token punctuation">=</span> <span class="token value attr-value">kcp</span><span class="token key attr-name">token</span> <span class="token punctuation">=</span> <span class="token value attr-value">password</span><span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">3389</span><span class="token punctuation">]</span></span><span class="token key attr-name">type</span> <span class="token punctuation">=</span> <span class="token value attr-value">tcp</span><span class="token key attr-name">local_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">3389</span><span class="token key attr-name">remote_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">13389</span><span class="token key attr-name">local_ip</span> <span class="token punctuation">=</span> <span class="token value attr-value">127.0.0.1</span></code></pre><p>local_port 为监听本地端口<br>remote_port 为绑定远程端口 </p><p>最后就是通过服务端IP，和绑定的远程端口，进行访问3389远程桌面，即可访问到穿透机器。<br>两边的参数就是这样，使用前还是建议去frp官方了解下参数，以避免因不懂参数定义而导致运行失败。 </p><h1 id="填坑"><a href="#填坑" class="headerlink" title="填坑"></a>填坑</h1><h2 id="时间同步"><a href="#时间同步" class="headerlink" title="时间同步"></a>时间同步</h2><ul><li> <code>date</code>修改时间 </li></ul><p>  查看：<code>date -R</code><br>  设置：<code>date -s</code></p><blockquote><p>如：设置当前时间为：2018年12月10点50分</p><p>date -s  ‘2018-12-14 10:50:00’</p></blockquote><ul><li><p>网络同步时间</p><p>使用ntp同步标准时间，ntp：网络时间协议（network time protol）<br>安装：<code>yum install ntp</code><br>同步：<code>ntpdate pool.ntp.org</code></p></li></ul><h2 id="开放端口"><a href="#开放端口" class="headerlink" title="开放端口"></a>开放端口</h2><p><code>7000</code> 和 <code>7001</code> 端口开放TCP和UDP，KCP模式是通过UDP发包的。</p><p><code>13389</code> 端口开放用来<strong>远程连接</strong></p><p><code>7500</code> 端口开放用来查看<strong>仪表盘</strong></p><h2 id="后台运行"><a href="#后台运行" class="headerlink" title="后台运行"></a>后台运行</h2><ul><li><p>使用 <code>nohup</code> 来启动<br>这是Frps的后台启动（路径写你服务器上的绝对路径）</p><p>如果要查看日志的话，就直接使用 <code>cat nohup.out</code>，就可以查看了。</p><p><code> nohup /path/to/your/fprs -c-c /path/to/your/frps.ini</code> </p><p>这是frpc的后台启动</p><p><code>nohup /path/to/your/fprc -c-c /path/to/your/frpc.ini</code></p></li><li><p>使用 <code>systemctl</code> 来控制启动<br>这个方法比较好用，很方便<br><code>sudo vim /lib/systemd/system/frps.service</code><br>在<code>frps.service</code>里写入以下内容</p><pre class="language-shell" data-language="shell"><code class="language-shell">[Unit]Description&#x3D;fraps serviceAfter&#x3D;network.target syslog.targetWants&#x3D;network.target[Service]Type&#x3D;simple#启动服务的命令（此处写你的frps的实际安装目录）ExecStart&#x3D;&#x2F;your&#x2F;path&#x2F;frps -c &#x2F;your&#x2F;path&#x2F;frps.ini[Install]WantedBy&#x3D;multi-user.target</code></pre><p>启动服务：<code>sudo systemctl start frps</code><br>开启自启：<code>sudo systemctl enable frps</code></p><p>重启服务：<code>sudo systemctl restart frps</code><br>停止服务：<code>sudo systemctl stop frps</code><br>查看日志：<code>sudo systemctl status frps</code></p></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;   一些国外VPS因地理遥远，延迟高等因素，使用 Windows 的 3389 访问卡慢，又没有什么单向软件能让本地 3389 变成增强 TCP 发包模式，以改善访问的流畅度。&lt;br&gt;  本次使用Frp的内网穿透，Kcp模式，大概原理就是，国外 VPS 用 frpc 客户端对 3389 穿透使用 KCP 模式，转发数据到 Frps 服务端。然后 Frps 服务端往返协议传输给终端用户。&lt;br&gt;  跳板，当然就是找台国内VPS，或者新加坡/香港的低延迟当中继，用来搭建 Frp 服务端。宽带没啥要求，用来访问 3389 1M 都行。&lt;/p&gt;
+&lt;p&gt;  开坑预览：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;开坑&lt;ol&gt;
+&lt;li&gt;Frp 服务端客户端搭建配置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;填坑&lt;ol&gt;
+&lt;li&gt;时间同步&lt;/li&gt;
+&lt;li&gt;开放端口&lt;/li&gt;
+&lt;li&gt;后台运行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;</summary>
+    
+    
+    
+    <category term="小试牛刀" scheme="https://www.myosotis.xin/categories/%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/"/>
+    
+    
+    <category term="内网穿透" scheme="https://www.myosotis.xin/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用 CMD 远程结束进程</title>
+    <link href="https://www.myosotis.xin/2019/07/26/one-commands/"/>
+    <id>https://www.myosotis.xin/2019/07/26/one-commands/</id>
+    <published>2019-07-26T13:30:56.000Z</published>
+    <updated>2019-07-25T18:34:18.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><blockquote><p> 温馨提示：需要做好一下准备，为了保证实验顺利进行需要保证“靶机”关闭防火墙。</p><p> 收集靶机信息：</p><ol><li>IP address for info</li><li>User for info</li><li>Password for info</li></ol></blockquote><hr><span id="more"></span><h3 id="查看进程"><a href="#查看进程" class="headerlink" title="查看进程"></a>查看进程</h3><pre class="language-cmd" data-language="cmd"><code class="language-cmd">TASKLIST [&#x2F;S system [&#x2F;U username [&#x2F;P [password]]]]         [&#x2F;M [module] | &#x2F;SVC | &#x2F;V] [&#x2F;FI filter] [&#x2F;FO format] [&#x2F;NH]描述:    该工具显示在本地或远程机器上当前运行的进程列表。参数列表:   &#x2F;S     system           指定连接到的远程系统。   &#x2F;U     [domain\]user    指定应该在哪个用户上下文执行这个命令。   &#x2F;P     [password]       为提供的用户上下文指定密码。如果省略，则                           提示输入。   &#x2F;M     [module]         列出当前使用所给 exe&#x2F;dll 名称的所有任务。                           如果没有指定模块名称，显示所有加载的模块。   &#x2F;SVC                    显示每个进程中主持的服务。   &#x2F;APPS 显示 Microsoft Store 应用及其关联的进程。   &#x2F;V                      显示详细任务信息。   &#x2F;FI    filter           显示一系列符合筛选器                           指定条件的任务。   &#x2F;FO    format           指定输出格式。                           有效值: &quot;TABLE&quot;、&quot;LIST&quot;、&quot;CSV&quot;。   &#x2F;NH                     指定列标题不应该                           在输出中显示。                           只对 &quot;TABLE&quot; 和 &quot;CSV&quot; 格式有效。   &#x2F;?                      显示此帮助消息。例如:    TASKLIST    TASKLIST &#x2F;M    TASKLIST &#x2F;V &#x2F;FO CSV    TASKLIST &#x2F;SVC &#x2F;FO LIST    TASKLIST &#x2F;APPS &#x2F;FI &quot;STATUS eq RUNNING&quot;    TASKLIST &#x2F;M wbem*    TASKLIST &#x2F;S system &#x2F;FO LIST    TASKLIST &#x2F;S system &#x2F;U 域\用户名 &#x2F;FO CSV &#x2F;NH#   TASKLIST &#x2F;S system &#x2F;U username &#x2F;P password &#x2F;FO TABLE &#x2F;NH    TASKLIST &#x2F;FI &quot;USERNAME ne NT AUTHORITY\SYSTEM&quot; &#x2F;FI &quot;STATUS eq running&quot;</code></pre><h3 id="终止进程"><a href="#终止进程" class="headerlink" title="终止进程"></a>终止进程</h3><pre class="language-cmd" data-language="cmd"><code class="language-cmd">TASKKILL [&#x2F;S system [&#x2F;U username [&#x2F;P [password]]]]         &#123; [&#x2F;FI filter] [&#x2F;PID processid | &#x2F;IM imagename] &#125; [&#x2F;T] [&#x2F;F]描述:    使用该工具按照进程 ID (PID) 或映像名称终止任务。参数列表:    &#x2F;S    system           指定要连接的远程系统。    &#x2F;U    [domain\]user    指定应该在哪个用户上下文执行这个命令。    &#x2F;P    [password]       为提供的用户上下文指定密码。如果忽略，提示                           输入。    &#x2F;FI   filter           应用筛选器以选择一组任务。                           允许使用 &quot;*&quot;。例如，映像名称 eq acme*    &#x2F;PID  processid        指定要终止的进程的 PID。                           使用 TaskList 取得 PID。    &#x2F;IM   imagename        指定要终止的进程的映像名称。通配符 &#39;*&#39;可用来                           指定所有任务或映像名称。    &#x2F;T                     终止指定的进程和由它启用的子进程。    &#x2F;F                     指定强制终止进程。    &#x2F;?                     显示帮助消息。例如:    TASKKILL &#x2F;IM notepad.exe    &#x2F;&#x2F;终止影响名称“notepad.exe”进程；    TASKKILL &#x2F;PID 1230 &#x2F;PID 1241 &#x2F;PID 1253 &#x2F;T    TASKKILL &#x2F;F &#x2F;IM cmd.exe &#x2F;T     TASKKILL &#x2F;F &#x2F;FI &quot;PID ge 1000&quot; &#x2F;FI &quot;WINDOWTITLE ne untitle*&quot;    TASKKILL &#x2F;F &#x2F;FI &quot;USERNAME eq NT AUTHORITY\SYSTEM&quot; &#x2F;IM notepad.exe    TASKKILL &#x2F;S system &#x2F;U 域\用户名 &#x2F;FI &quot;用户名 ne NT*&quot; &#x2F;IM *    TASKKILL &#x2F;S system &#x2F;U username &#x2F;P password &#x2F;FI &quot;IMAGENAME eq note*&quot;#   TASKKILL &#x2F;S system &#x2F;U username &#x2F;P password &#x2F;IM &quot;explorer.exe&quot; &#x2F;F &#x2F;T     &#x2F;&#x2F;强制终止远程用户“explorer.exe”进程和它由启用的子进程。</code></pre>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt; 温馨提示：需要做好一下准备，为了保证实验顺利进行需要保证“靶机”关闭防火墙。&lt;/p&gt;
+&lt;p&gt; 收集靶机信息：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;IP address for info&lt;/li&gt;
+&lt;li&gt;User for info&lt;/li&gt;
+&lt;li&gt;Password for info&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;</summary>
+    
+    
+    
+    <category term="小试牛刀" scheme="https://www.myosotis.xin/categories/%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/"/>
+    
+    
+    <category term="Cmd" scheme="https://www.myosotis.xin/tags/Cmd/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>“黄叹号”网络分析</title>
+    <link href="https://www.myosotis.xin/2019/07/22/network-commands/"/>
+    <id>https://www.myosotis.xin/2019/07/22/network-commands/</id>
+    <published>2019-07-22T13:30:56.000Z</published>
+    <updated>2021-05-15T12:17:15.987Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><blockquote><p>有的小伙伴可能会遇见网络异常，突然上不了网了，电脑右下角“网络图标”出现黄叹号。经过自己努力的收集、整理资料。总结了四个常见的问题进行分析，以及解决的方案。</p></blockquote><hr><span id="more"></span><h3 id="异常①"><a href="#异常①" class="headerlink" title="异常①"></a>异常①</h3><ul><li><input disabled="" type="checkbox"> <strong>分析：</strong>如果使用静态IP地址，突然出现黄叹号提示，那很可能是你得IP地址被占用一般情况会提示：IP冲突；在IP冲突的时候；</li><li><input disabled="" type="checkbox"> <strong>解决：</strong>请“打开网络和共享中心–本地连接”修改IP地址即可。</li></ul><h3 id="异常②"><a href="#异常②" class="headerlink" title="异常②"></a>异常②</h3><ul><li><input disabled="" type="checkbox"> <strong>分析：</strong>如果在某种网络环境下，其他人使用正常，而您的网络连接显示为黄叹号，并且IP、DNS都正常，那很可能是计算机的网卡驱动程序出现异常；</li><li><input disabled="" type="checkbox"> <strong>解决：</strong>此时请下载并重新安装网卡驱动程序，重启计算机后故障即可解决。</li></ul><h3 id="异常③"><a href="#异常③" class="headerlink" title="异常③"></a>异常③</h3><ul><li><input disabled="" type="checkbox"> <strong>分析：</strong>如果在某种网络环境下，其他人使用正常，而您的网络连接显示为黄叹号，并且IP、DNS都正常，那很可能是计算机的网卡驱动程序出现异常；</li><li><input disabled="" type="checkbox"> <strong>解决：</strong>此时请下载并重新安装网卡驱动程序，重启计算机后故障即可解决。</li></ul><h3 id="异常④"><a href="#异常④" class="headerlink" title="异常④"></a>异常④</h3><ul><li><input disabled="" type="checkbox"> <strong>分析：</strong>如果以上方法都无法解决，而同一网络内的其他用户也显示黄叹号；</li><li><input disabled="" type="checkbox"> <strong>解决：</strong>那么肯定是接入的路由器、交换机、防火墙等出现故障，请找专业的网络工程师进行解决。</li></ul><blockquote><p>注：以下内容，个人总结；如有不足，还望指出。</p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;有的小伙伴可能会遇见网络异常，突然上不了网了，电脑右下角“网络图标”出现黄叹号。经过自己努力的收集、整理资料。总结了四个常见的问题进行分析，以及解决的方案。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;</summary>
+    
+    
+    
+    <category term="小岛诊所" scheme="https://www.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/"/>
+    
+    <category term="Windows篇" scheme="https://www.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/Windows%E7%AF%87/"/>
+    
+    
+    <category term="网络" scheme="https://www.myosotis.xin/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PING 网络状态分析</title>
+    <link href="https://www.myosotis.xin/2019/07/22/ping-commands/"/>
+    <id>https://www.myosotis.xin/2019/07/22/ping-commands/</id>
+    <published>2019-07-22T13:19:56.000Z</published>
+    <updated>2021-05-15T12:17:46.483Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><blockquote><p>Ping 是 Windows、Unix 或 Linux 系统下的一个命令。Ping 也是一个通信协议是 TCP/IP 协议的一部分。利用 Ping 命令可以检查网络是否连通，可以很好地帮助我们分析和判定网络故障。</p></blockquote><hr><span id="more"></span><table><thead><tr><th align="left">操作</th><th align="left">分析</th></tr></thead><tbody><tr><td align="left">Ping [环回地址]</td><td align="left">判断本地机TCP/IP协议是否异常；<br/></td></tr><tr><td align="left">Ping [本地地址]</td><td align="left">判断网卡和猫（MODEM）是否正常工作；<br/></td></tr><tr><td align="left">Ping [网关地址]</td><td align="left">判断本地机与路由连接媒介（网线）是否有异常；<br/></td></tr><tr><td align="left">Ping [DNS地址]</td><td align="left">对线路进行排查，确保所有（网络）设备接口连<br/>接正常；或者运营商服务器超负荷运行造成的数<br/>据包丢失，我们需要避开上网高峰期。<br/>或者，表明主机文件（windows/host）存在问题。</td></tr></tbody></table><blockquote><p>注：以下内容，个人总结；如有不足，还望指出。</p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Ping 是 Windows、Unix 或 Linux 系统下的一个命令。Ping 也是一个通信协议是 TCP/IP 协议的一部分。利用 Ping 命令可以检查网络是否连通，可以很好地帮助我们分析和判定网络故障。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;</summary>
+    
+    
+    
+    <category term="小岛诊所" scheme="https://www.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/"/>
+    
+    <category term="Windows篇" scheme="https://www.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/Windows%E7%AF%87/"/>
+    
+    
+    <category term="Cmd" scheme="https://www.myosotis.xin/tags/Cmd/"/>
+    
+    <category term="命令提示符" scheme="https://www.myosotis.xin/tags/%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 博客迁移</title>
+    <link href="https://www.myosotis.xin/2019/06/16/hexo-7/"/>
+    <id>https://www.myosotis.xin/2019/06/16/hexo-7/</id>
+    <published>2019-06-16T04:48:41.000Z</published>
+    <updated>2019-10-23T23:41:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><blockquote><p>看那些“大佬”做的<strong>迁移教程</strong>，身为“网志”小白的我。可谓是的一脸<strong>懵</strong>，所以打算做期教程。</p></blockquote><hr><span id="more"></span><h1 id="拷贝"><a href="#拷贝" class="headerlink" title="拷贝"></a>拷贝</h1><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#目录</span> scaffolds/ source/ themes/ <span class="token comment">#文件</span>_config.yml package.json</code></pre><p><strong>注意</strong>无需全部拷贝，将一下进行**[目录/文件]<strong>拷贝到</strong>新建目录**。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h3 id="Windows-本地安装"><a href="#Windows-本地安装" class="headerlink" title="Windows 本地安装"></a>Windows 本地安装</h3><ul><li>安装 <a href="https://git-scm.com/downloads">Git</a></li><li>安装 <a href="https://nodejs.org/zh-cn/download/">Node.js</a></li></ul><h3 id="CentOS-安装"><a href="#CentOS-安装" class="headerlink" title="CentOS 安装"></a>CentOS 安装</h3><ul><li><p>安装 <strong>nodejs</strong></p></li><li><p>安装 <strong>npm</strong></p><p><code>yum -y install nodejs npm --enablerepo=epel</code></p></li></ul><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><blockquote><p>#新建目录 Blog，切换目录 Blog。</p></blockquote><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#安装 hexo</span>$ <span class="token function">npm</span> <span class="token function">install</span> -g hexo<span class="token comment">#安装模块</span>$ <span class="token function">npm</span> <span class="token function">install</span>$ <span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save$ <span class="token function">npm</span> <span class="token function">install</span> hexo-generator-feed --save$ <span class="token function">npm</span> <span class="token function">install</span> hexo-generator-sitemap --save</code></pre><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><h3 id="生成："><a href="#生成：" class="headerlink" title="生成："></a>生成：</h3><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#配置“用户名称”和“用户邮箱”。</span>$ <span class="token function">git</span> config --global user.name <span class="token string">"***"</span>$ <span class="token function">git</span> config --global user.email <span class="token string">"***@qq.com"</span> <span class="token comment">#生成密钥</span>$ ssh-keygen -t rsa -C <span class="token string">"***@qq.com"</span></code></pre><h3 id="添加："><a href="#添加：" class="headerlink" title="添加："></a>添加：</h3><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#复制 SHH 密钥</span>- 将 id_rsa.pub 文件内容复制到 Github 。<span class="token comment">#添加 SSH 密钥</span>- 标题：Blog  - 键：粘贴 id-rsa.pub 的内容    - 最后确认【添加SSH密钥】</code></pre><p>More info:<a href="https://github.com/settings/ssh/new">Links</a></p><h3 id="部署："><a href="#部署：" class="headerlink" title="部署："></a>部署：</h3><pre class="language-bash" data-language="bash"><code class="language-bash"><span class="token comment">#博客部署</span>$ hexo d -g</code></pre>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;看那些“大佬”做的&lt;strong&gt;迁移教程&lt;/strong&gt;，身为“网志”小白的我。可谓是的一脸&lt;strong&gt;懵&lt;/strong&gt;，所以打算做期教程。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://www.myosotis.xin/categories/Hexo/"/>
+    
+    
+    <category term="填坑" scheme="https://www.myosotis.xin/tags/%E5%A1%AB%E5%9D%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>初识 Typora</title>
+    <link href="https://www.myosotis.xin/2019/06/13/markdown-typora/"/>
+    <id>https://www.myosotis.xin/2019/06/13/markdown-typora/</id>
+    <published>2019-06-13T04:34:57.000Z</published>
+    <updated>2021-08-24T15:23:12.537Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><blockquote><p><strong>Markdown</strong>是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式，其目标是实现易读易写。我刚刚接触一款简单高效的<strong>Markdown</strong>编辑器<strong>Typora</strong>，个人觉得非常好用，强烈推荐给大家。</p></blockquote><hr><span id="more"></span><h1 id="Typora的优点"><a href="#Typora的优点" class="headerlink" title="Typora的优点"></a>Typora的优点</h1><ul><li>简洁美观</li><li>实时预览</li><li>扩展语法</li><li>跨平台</li><li>免费</li></ul><h1 id="主要功能介绍"><a href="#主要功能介绍" class="headerlink" title="主要功能介绍"></a>主要功能介绍</h1><h2 id="标注"><a href="#标注" class="headerlink" title="标注"></a>标注</h2><p>（1）标题</p><pre class="language-none"><code class="language-none"># 标题</code></pre><p>（2）下划线</p><pre class="language-none"><code class="language-none">&lt;u&gt;下划线&lt;&#x2F;u&gt;</code></pre><p>（3）强调</p><pre class="language-none"><code class="language-none">**强调**</code></pre><p>（4）斜体</p><pre class="language-none"><code class="language-none">*斜体*</code></pre><p>（5）删除线</p><pre class="language-none"><code class="language-none">~~删除线~~</code></pre><p>（6）高亮</p><pre class="language-none"><code class="language-none">&#x3D;&#x3D;高亮&#x3D;&#x3D;</code></pre><p>（7）上标</p><pre class="language-none"><code class="language-none">^上标^</code></pre><p>（8）下标</p><pre class="language-none"><code class="language-none">~下标~</code></pre><h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p>（1）有序列表</p><pre class="language-none"><code class="language-none">[数字].[Tab]</code></pre><p>（2）无序列表</p><pre class="language-none"><code class="language-none">*[Tab]</code></pre><h2 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h2><p>（1）图片 </p><pre class="language-none"><code class="language-none">![图片标题](图片连接)</code></pre><p>（2）连接</p><pre class="language-none"><code class="language-none">[链接提示](链接地址)</code></pre><p>（3）公式</p><pre class="language-none"><code class="language-none">$$[回车]</code></pre><p>（4）代码</p><pre class="language-none"><code class="language-none">&#96;[内行代码]&#96;​&#96;&#96;&#96;[选择语言][回车]</code></pre><p>（5）Table</p><pre class="language-none"><code class="language-none">|姓名|性别|年龄|手机号||:---|:--:|:--:|---:||张三|男|21|18975346876||李四|女|23|17789548964||王五|男|25|15876513546|</code></pre><p>（6）分割线</p><pre class="language-none"><code class="language-none">***---</code></pre><p>（7）任务列表</p><pre class="language-none"><code class="language-none">-  [ ]  吸烟-  [ ]  喝酒 -  [ ]  染发</code></pre><p>（8）脚注​</p><pre class="language-none"><code class="language-none">文章[^脚注]。[^脚注]:定义脚注</code></pre><h2 id="图表"><a href="#图表" class="headerlink" title="图表"></a>图表</h2><p>（1）序列</p><pre class="language-none"><code class="language-none">​&#96;&#96;&#96;sequenceAlice-&gt;Bob: Hello Bob, how are you?Note right of Bob: Bob thinksBob--&gt;Alice: I am good thanks!</code></pre><p><img src="https://i.loli.net/2019/06/16/5d05c71c7e6d133986.png" alt="Snip20160816_1.png" loading="lazy"></p><!-- new line --><p>（2）流程图</p><pre class="language-none"><code class="language-none">​&#96;&#96;&#96;flowst&#x3D;&gt;start: Startop&#x3D;&gt;operation: Your Operationcond&#x3D;&gt;condition: Yes or No?e&#x3D;&gt;endst-&gt;op-&gt;condcond(yes)-&gt;econd(no)-&gt;op</code></pre><p><img src="https://i.loli.net/2019/06/16/5d05c71c7e62858463.png" alt="space" loading="lazy"></p><!-- new line --><p>（3）Mermid(美人鱼)</p><p><img src="https://mermaidjs.github.io/images/header.png" alt="标题图片" loading="lazy"></p><!-- new line --><blockquote><p>以与markdown类似的方式从文本生成图表和流程图。</p></blockquote><p>曾经想在解释代码时简化文档并避免像Visio这样的繁重工具吗？</p><p>这就是为什么美人鱼诞生了，一种简单的降价式脚本语言，用于通过javascript从文本生成图表。<a href="https://mermaidjs.github.io/">网页帮助</a>。</p><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>（1）居中</p><pre class="language-none"><code class="language-none">&lt;center&gt;居中&lt;&#x2F;center&gt;</code></pre><p>（2）目录</p><pre class="language-none"><code class="language-none">[TOC]</code></pre><h1 id="Typora快捷键整合"><a href="#Typora快捷键整合" class="headerlink" title="Typora快捷键整合"></a>Typora快捷键整合</h1><table><thead><tr><th align="center">作用</th><th align="center">快捷键</th><th align="center">快捷键</th><th align="center">作用</th></tr></thead><tbody><tr><td align="center">一阶标题</td><td align="center">Ctrl＋1</td><td align="center">Ctrl＋B</td><td align="center">字体加粗</td></tr><tr><td align="center">二阶标题</td><td align="center">Ctrl＋2</td><td align="center">Ctrl＋I</td><td align="center">字体倾斜</td></tr><tr><td align="center">三阶标题</td><td align="center">Ctrl＋3</td><td align="center">Ctrl＋U</td><td align="center">下划线</td></tr><tr><td align="center">四阶标题</td><td align="center">Ctrl＋4</td><td align="center">Ctrl＋Home</td><td align="center">返回Typora顶部</td></tr><tr><td align="center">五阶标题</td><td align="center">Ctrl＋5</td><td align="center">Ctrl＋End</td><td align="center">返回Typora底部</td></tr><tr><td align="center">六阶标题</td><td align="center">Ctrl＋6</td><td align="center">Ctrl＋T</td><td align="center">创建表格</td></tr><tr><td align="center">选中某句话</td><td align="center">Ctrl＋L</td><td align="center">Ctrl＋K</td><td align="center">创建超链接</td></tr><tr><td align="center">选中某个单词</td><td align="center">Ctrl＋D</td><td align="center">Ctrl+F</td><td align="center">搜索</td></tr><tr><td align="center">选中相同格式的文字</td><td align="center">Ctrl＋E</td><td align="center">Ctrl+H</td><td align="center">搜索并替换</td></tr><tr><td align="center">删除线</td><td align="center">Alt+Shift+5</td><td align="center">Ctrl+Shift+I</td><td align="center">插入图片</td></tr><tr><td align="center">公式块</td><td align="center">Ctrl+Shift+M</td><td align="center">Ctrl+Shift+Q</td><td align="center">引用</td></tr></tbody></table><h1 id="输入文件格式多样化"><a href="#输入文件格式多样化" class="headerlink" title="输入文件格式多样化"></a>输入文件格式多样化</h1><p>Typora 的文件导入/导出功能使用<a href="https://baike.baidu.com/item/Pandoc/14083103?fr=aladdin"><strong>Pandoc</strong></a>把<a href="https://baike.baidu.com/item/markdown/3245829?fr=aladdin"><strong>Markdown</strong></a>源码转换成不同的文件格式，所以我们如果想使用文件导入/导出功能，必须先安装 Pandoc。 </p><h1 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h1><p>点击进入<a href="https://typora.io/"><strong>Typora</strong></a>&amp;<a href="http://pandoc.org/installing.html"><strong>Pandoc</strong></a>进行官网下载。</p><blockquote><p>我刚开始用Typora这款软件，就被它的简洁和高效吸引，操作简单，界面美观，在书写文档的时候有全新的体验，现在对它的诸多功能还不是很熟悉，相信不断熟悉之后会有更多的惊喜和便利。</p></blockquote><blockquote><p>以上内容为本人拙见，不足之处，还望各位批评指正，希望能和大家一起交流。</p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt;是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式，其目标是实现易读易写。我刚刚接触一款简单高效的&lt;strong&gt;Markdown&lt;/strong&gt;编辑器&lt;strong&gt;Typora&lt;/strong&gt;，个人觉得非常好用，强烈推荐给大家。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;</summary>
+    
+    
+    
+    <category term="岛主推荐" scheme="https://www.myosotis.xin/categories/%E5%B2%9B%E4%B8%BB%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="文本编辑器" scheme="https://www.myosotis.xin/categories/%E5%B2%9B%E4%B8%BB%E6%8E%A8%E8%8D%90/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    
+    
+    <category term="Markdown" scheme="https://www.myosotis.xin/tags/Markdown/"/>
+    
+    <category term="Typora" scheme="https://www.myosotis.xin/tags/Typora/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最荐飞机场</title>
+    <link href="https://www.myosotis.xin/2019/06/08/vpn/"/>
+    <id>https://www.myosotis.xin/2019/06/08/vpn/</id>
+    <published>2019-06-08T05:16:55.000Z</published>
+    <updated>2021-08-24T15:19:58.804Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><blockquote><p>全球<strong>40+<strong>个加速网络连接服务点，专业的网络加速</strong>CN2</strong>直连线路，为客户提供高速稳定的加速体验。</p></blockquote><hr><span id="more"></span><h3 id="详细介绍"><a href="#详细介绍" class="headerlink" title="详细介绍"></a>详细介绍</h3><blockquote><ul><li>🚀<strong>速度</strong><br>加速网络均部署了先进的<strong>TCP</strong>加速技术，用户无需下载任何额外软件，就可以享受到<strong>SockBoom</strong>云加速加速网络带来的高速度。</li></ul></blockquote><blockquote><ul><li>🚲<strong>稳定</strong><br>致力于确保服务器稳定运作，连接点具有多重负载均衡机制以及智能分流加速，全节点<strong>SLA</strong>保证，随时畅通的高效加速。</li></ul></blockquote><blockquote><ul><li>🛴<strong>简单</strong><br>所有的设备通用，一个帐号即可畅通您所有的智能设备，稳定运行于主流的<strong>Windows / IOS / Android / Mac OS</strong> 等操作系统。</li></ul></blockquote><p>More info: <a href="https://sockboom.lol/auth/register?affid=10570">Links</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;全球&lt;strong&gt;40+&lt;strong&gt;个加速网络连接服务点，专业的网络加速&lt;/strong&gt;CN2&lt;/strong&gt;直连线路，为客户提供高速稳定的加速体验。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;</summary>
+    
+    
+    
+    <category term="岛主推荐" scheme="https://www.myosotis.xin/categories/%E5%B2%9B%E4%B8%BB%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="VPN" scheme="https://www.myosotis.xin/categories/%E5%B2%9B%E4%B8%BB%E6%8E%A8%E8%8D%90/VPN/"/>
+    
+    
+    <category term="VPN" scheme="https://www.myosotis.xin/tags/VPN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://www.myosotis.xin/2019/06/01/hello-world/"/>
+    <id>https://www.myosotis.xin/2019/06/01/hello-world/</id>
+    <published>2019-06-01T05:16:55.000Z</published>
+    <updated>2019-07-20T00:11:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    <category term="你好，世界" scheme="https://www.myosotis.xin/categories/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E4%B8%96%E7%95%8C/"/>
+    
+    
+  </entry>
+  
+</feed>
