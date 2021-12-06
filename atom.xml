@@ -6,7 +6,7 @@
   <link href="https://www.myosotis.xin/atom.xml" rel="self"/>
   
   <link href="https://www.myosotis.xin/"/>
-  <updated>2021-12-05T15:47:30.103Z</updated>
+  <updated>2021-12-06T10:53:17.418Z</updated>
   <id>https://www.myosotis.xin/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo</title>
+    <link href="https://www.myosotis.xin/2021/12/06/hexo-9/"/>
+    <id>https://www.myosotis.xin/2021/12/06/hexo-9/</id>
+    <published>2021-12-06T10:53:17.000Z</published>
+    <updated>2021-12-06T10:53:17.418Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css&quot;&gt;&lt;scrip</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hexo部署出现错误 Error: Spawn failed 解决方式</title>
@@ -256,6 +276,36 @@
   </entry>
   
   <entry>
+    <title>通过宝塔搭建 Frp，实现内网穿透（通用版）</title>
+    <link href="https://www.myosotis.xin/2019/10/16/bt-ftp/"/>
+    <id>https://www.myosotis.xin/2019/10/16/bt-ftp/</id>
+    <published>2019-10-16T09:21:05.000Z</published>
+    <updated>2021-05-12T13:35:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><blockquote><p>  利用 Frp 实现内网穿透，通过 mstsc 远程主机💻</p><p> 直奔主题，准备如下：</p><ol><li>公网IP: X.X.X.X（VPS）</li><li>内网IP: X.X.X.X</li><li>映射到公网的域名：xxx.com<br>  VPS是Linux系统，本地是win</li></ol></blockquote><hr><span id="more"></span><h1 id="搭建配置-Frps"><a href="#搭建配置-Frps" class="headerlink" title="搭建配置 Frps"></a>搭建配置 Frps</h1><h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p><img src="https://db.myosotis.xin/images/2019/10/16/Z1a72bjAJt/1571208171656.png" alt="1" loading="lazy"></p><h2 id="通用配置"><a href="#通用配置" class="headerlink" title="通用配置"></a>通用配置</h2><blockquote><p>监听地址：*填写IP地址或者域名地址，推荐填写域名地址（比较好记）</p></blockquote><blockquote><p>验证密码：*随便填写</p></blockquote><p><img src="https://db.myosotis.xin/images/2019/10/16/iekNSRDK5I/1571208634784.png" alt="2" loading="lazy"></p><h2 id="高级配置"><a href="#高级配置" class="headerlink" title="高级配置"></a>高级配置</h2><p><img src="https://db.myosotis.xin/images/2019/10/16/PNdk7aXCdI/1571209153584.png" alt="3" loading="lazy"></p><h2 id="仪表盘设置"><a href="#仪表盘设置" class="headerlink" title="仪表盘设置"></a>仪表盘设置</h2><blockquote><p>食用方法：[ip/域名]:7500</p></blockquote><blockquote><p>例子：<br>    1.1.1.1:7500<br>    xx.com:7500</p></blockquote><p><img src="https://db.myosotis.xin/images/2019/10/16/B5quX5zSDP/1571209329526.png" alt="4" loading="lazy"></p><h2 id="运行状态"><a href="#运行状态" class="headerlink" title="运行状态"></a>运行状态</h2><blockquote><p>当前状态：开启</p></blockquote><h1 id="安装食用-Frpc"><a href="#安装食用-Frpc" class="headerlink" title="安装食用 Frpc"></a>安装食用 Frpc</h1><p><a href="https://github.com/fatedier/frp/releases"><strong>其他版本</strong></a>|<a href="https://github.com/fatedier/frp/releases/download/v0.29.0/frp_0.29.0_windows_amd64.zip"><strong>Windows 系统</strong></a></p><h2 id="开始食用"><a href="#开始食用" class="headerlink" title="开始食用"></a>开始食用</h2><p>解压设置 <strong>frpc.ini</strong></p><pre class="language-ini" data-language="ini"><code class="language-ini"><span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">common</span><span class="token punctuation">]</span></span><span class="token key attr-name">server_addr</span> <span class="token punctuation">=</span> <span class="token value attr-value">0.0.0.0</span><span class="token key attr-name">server_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">7000</span><span class="token key attr-name">token</span> <span class="token punctuation">=</span> <span class="token value attr-value">12345678</span><span class="token key attr-name">tcp_mux</span> <span class="token punctuation">=</span> <span class="token value attr-value">true</span><span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">rdp</span><span class="token punctuation">]</span></span><span class="token key attr-name">type</span> <span class="token punctuation">=</span> <span class="token value attr-value">tcp</span><span class="token key attr-name">local_ip</span> <span class="token punctuation">=</span> <span class="token value attr-value">127.0.0.1</span>           <span class="token key attr-name">local_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">3389</span><span class="token key attr-name">remote_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">7001</span>  <span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">smb</span><span class="token punctuation">]</span></span><span class="token key attr-name">type</span> <span class="token punctuation">=</span> <span class="token value attr-value">tcp</span><span class="token key attr-name">local_ip</span> <span class="token punctuation">=</span> <span class="token value attr-value">127.0.0.1</span><span class="token key attr-name">local_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">445</span><span class="token key attr-name">remote_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">7002</span></code></pre><p>运行进入<strong>frpc.ini</strong>文件目录里</p><p><code>Shift + 右击</code> 选择 <code>S</code> 键</p><p><code> .\frpc.exe -c frpc.ini</code></p><h1 id="客户端自启（进阶篇）"><a href="#客户端自启（进阶篇）" class="headerlink" title="客户端自启（进阶篇）"></a>客户端自启（进阶篇）</h1><blockquote><p>同样的道理，我们也需要对客户端设置后台运行和开机自启。借助 winsw 工具可以将frpc注册为windows系统中的服务。</p></blockquote><p>仅下载 <strong>WinSW.NET2.exe</strong> 或者 <strong>WinSW.NET4.exe</strong>，它们之间人选其一便可。<a href="https://github.com/kohsuke/winsw/releases"><strong>下载地址</strong></a></p><p><strong>下载 winsw 最新版</strong>，为了方便将其<strong>重命名</strong>为<code>winsw.exe</code>, 将该文件和<code>frpc.exe</code>放在一起，然后<strong>新建</strong><code>winsw.xml</code>写入以下内容： </p><pre class="language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>service</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>Frp<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>Frp<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用 Frpc 发布本地电脑网站到外网/description>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>executable</span><span class="token punctuation">></span></span>frpc<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>executable</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>arguments</span><span class="token punctuation">></span></span>-c frpc.ini<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>arguments</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logmode</span><span class="token punctuation">></span></span>reset<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>logmode</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>service</span><span class="token punctuation">></span></span></code></pre><p> 然后使用<code>winsw install</code>和<code>frpc start</code>命令即可将 frpc 安装为系统服务。<br><code>win+r</code> 后通过<code>services.msc</code>进入到服务列表页面找到 frp 服务。 </p><p><img src="https://db.myosotis.xin/images/2019/10/16/oqImiNgFX1/5990755-e2077fe9512c8ca6.jpg" alt="5" loading="lazy"></p><p>确保frpc在连接失败后自动尝试重新连接，在恢复tap页进行如下设置：</p><p><img src="https://db.myosotis.xin/images/2019/10/16/os3XGu8ugQ/5990755-87c0941ef5c495fc.jpg" alt="6" loading="lazy"></p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;  利用 Frp 实现内网穿透，通过 mstsc 远程主机💻&lt;/p&gt;
+&lt;p&gt; 直奔主题，准备如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;公网IP: X.X.X.X（VPS）&lt;/li&gt;
+&lt;li&gt;内网IP: X.X.X.X&lt;/li&gt;
+&lt;li&gt;映射到公网的域名：xxx.com&lt;br&gt;  VPS是Linux系统，本地是win&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;</summary>
+    
+    
+    
+    <category term="小试牛刀" scheme="https://www.myosotis.xin/categories/%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/"/>
+    
+    
+    <category term="内网穿透" scheme="https://www.myosotis.xin/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>利用 Frp 内网穿透 KCP 模式做跳板，让你访问更加顺畅（海外版）</title>
     <link href="https://www.myosotis.xin/2019/10/16/bt-ftp1/"/>
     <id>https://www.myosotis.xin/2019/10/16/bt-ftp1/</id>
@@ -279,36 +329,6 @@
 &lt;li&gt;后台运行&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;</summary>
-    
-    
-    
-    <category term="小试牛刀" scheme="https://www.myosotis.xin/categories/%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/"/>
-    
-    
-    <category term="内网穿透" scheme="https://www.myosotis.xin/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>通过宝塔搭建 Frp，实现内网穿透（通用版）</title>
-    <link href="https://www.myosotis.xin/2019/10/16/bt-ftp/"/>
-    <id>https://www.myosotis.xin/2019/10/16/bt-ftp/</id>
-    <published>2019-10-16T09:21:05.000Z</published>
-    <updated>2021-05-12T13:35:49.000Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><blockquote><p>  利用 Frp 实现内网穿透，通过 mstsc 远程主机💻</p><p> 直奔主题，准备如下：</p><ol><li>公网IP: X.X.X.X（VPS）</li><li>内网IP: X.X.X.X</li><li>映射到公网的域名：xxx.com<br>  VPS是Linux系统，本地是win</li></ol></blockquote><hr><span id="more"></span><h1 id="搭建配置-Frps"><a href="#搭建配置-Frps" class="headerlink" title="搭建配置 Frps"></a>搭建配置 Frps</h1><h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p><img src="https://db.myosotis.xin/images/2019/10/16/Z1a72bjAJt/1571208171656.png" alt="1" loading="lazy"></p><h2 id="通用配置"><a href="#通用配置" class="headerlink" title="通用配置"></a>通用配置</h2><blockquote><p>监听地址：*填写IP地址或者域名地址，推荐填写域名地址（比较好记）</p></blockquote><blockquote><p>验证密码：*随便填写</p></blockquote><p><img src="https://db.myosotis.xin/images/2019/10/16/iekNSRDK5I/1571208634784.png" alt="2" loading="lazy"></p><h2 id="高级配置"><a href="#高级配置" class="headerlink" title="高级配置"></a>高级配置</h2><p><img src="https://db.myosotis.xin/images/2019/10/16/PNdk7aXCdI/1571209153584.png" alt="3" loading="lazy"></p><h2 id="仪表盘设置"><a href="#仪表盘设置" class="headerlink" title="仪表盘设置"></a>仪表盘设置</h2><blockquote><p>食用方法：[ip/域名]:7500</p></blockquote><blockquote><p>例子：<br>    1.1.1.1:7500<br>    xx.com:7500</p></blockquote><p><img src="https://db.myosotis.xin/images/2019/10/16/B5quX5zSDP/1571209329526.png" alt="4" loading="lazy"></p><h2 id="运行状态"><a href="#运行状态" class="headerlink" title="运行状态"></a>运行状态</h2><blockquote><p>当前状态：开启</p></blockquote><h1 id="安装食用-Frpc"><a href="#安装食用-Frpc" class="headerlink" title="安装食用 Frpc"></a>安装食用 Frpc</h1><p><a href="https://github.com/fatedier/frp/releases"><strong>其他版本</strong></a>|<a href="https://github.com/fatedier/frp/releases/download/v0.29.0/frp_0.29.0_windows_amd64.zip"><strong>Windows 系统</strong></a></p><h2 id="开始食用"><a href="#开始食用" class="headerlink" title="开始食用"></a>开始食用</h2><p>解压设置 <strong>frpc.ini</strong></p><pre class="language-ini" data-language="ini"><code class="language-ini"><span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">common</span><span class="token punctuation">]</span></span><span class="token key attr-name">server_addr</span> <span class="token punctuation">=</span> <span class="token value attr-value">0.0.0.0</span><span class="token key attr-name">server_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">7000</span><span class="token key attr-name">token</span> <span class="token punctuation">=</span> <span class="token value attr-value">12345678</span><span class="token key attr-name">tcp_mux</span> <span class="token punctuation">=</span> <span class="token value attr-value">true</span><span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">rdp</span><span class="token punctuation">]</span></span><span class="token key attr-name">type</span> <span class="token punctuation">=</span> <span class="token value attr-value">tcp</span><span class="token key attr-name">local_ip</span> <span class="token punctuation">=</span> <span class="token value attr-value">127.0.0.1</span>           <span class="token key attr-name">local_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">3389</span><span class="token key attr-name">remote_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">7001</span>  <span class="token header"><span class="token punctuation">[</span><span class="token section-name selector">smb</span><span class="token punctuation">]</span></span><span class="token key attr-name">type</span> <span class="token punctuation">=</span> <span class="token value attr-value">tcp</span><span class="token key attr-name">local_ip</span> <span class="token punctuation">=</span> <span class="token value attr-value">127.0.0.1</span><span class="token key attr-name">local_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">445</span><span class="token key attr-name">remote_port</span> <span class="token punctuation">=</span> <span class="token value attr-value">7002</span></code></pre><p>运行进入<strong>frpc.ini</strong>文件目录里</p><p><code>Shift + 右击</code> 选择 <code>S</code> 键</p><p><code> .\frpc.exe -c frpc.ini</code></p><h1 id="客户端自启（进阶篇）"><a href="#客户端自启（进阶篇）" class="headerlink" title="客户端自启（进阶篇）"></a>客户端自启（进阶篇）</h1><blockquote><p>同样的道理，我们也需要对客户端设置后台运行和开机自启。借助 winsw 工具可以将frpc注册为windows系统中的服务。</p></blockquote><p>仅下载 <strong>WinSW.NET2.exe</strong> 或者 <strong>WinSW.NET4.exe</strong>，它们之间人选其一便可。<a href="https://github.com/kohsuke/winsw/releases"><strong>下载地址</strong></a></p><p><strong>下载 winsw 最新版</strong>，为了方便将其<strong>重命名</strong>为<code>winsw.exe</code>, 将该文件和<code>frpc.exe</code>放在一起，然后<strong>新建</strong><code>winsw.xml</code>写入以下内容： </p><pre class="language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>service</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>Frp<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>Frp<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>description</span><span class="token punctuation">></span></span>用 Frpc 发布本地电脑网站到外网/description>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>executable</span><span class="token punctuation">></span></span>frpc<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>executable</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>arguments</span><span class="token punctuation">></span></span>-c frpc.ini<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>arguments</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logmode</span><span class="token punctuation">></span></span>reset<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>logmode</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>service</span><span class="token punctuation">></span></span></code></pre><p> 然后使用<code>winsw install</code>和<code>frpc start</code>命令即可将 frpc 安装为系统服务。<br><code>win+r</code> 后通过<code>services.msc</code>进入到服务列表页面找到 frp 服务。 </p><p><img src="https://db.myosotis.xin/images/2019/10/16/oqImiNgFX1/5990755-e2077fe9512c8ca6.jpg" alt="5" loading="lazy"></p><p>确保frpc在连接失败后自动尝试重新连接，在恢复tap页进行如下设置：</p><p><img src="https://db.myosotis.xin/images/2019/10/16/os3XGu8ugQ/5990755-87c0941ef5c495fc.jpg" alt="6" loading="lazy"></p>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;  利用 Frp 实现内网穿透，通过 mstsc 远程主机💻&lt;/p&gt;
-&lt;p&gt; 直奔主题，准备如下：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;公网IP: X.X.X.X（VPS）&lt;/li&gt;
-&lt;li&gt;内网IP: X.X.X.X&lt;/li&gt;
-&lt;li&gt;映射到公网的域名：xxx.com&lt;br&gt;  VPS是Linux系统，本地是win&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;</summary>
