@@ -2,16 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.myosotis.xin/2019/10/16/bt-ftp/</loc>
+    <loc>https://blog.myosotis.xin/2019/06/01/hello-world/</loc>
     
-    <lastmod>2021-12-17</lastmod>
+    <lastmod>2021-12-28</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/2021/12/06/hexo-9/</loc>
+    <loc>https://blog.myosotis.xin/2021/12/28/hexo-10/</loc>
+    
+    <lastmod>2021-12-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.myosotis.xin/2019/10/16/bt-frp/</loc>
+    
+    <lastmod>2021-12-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.myosotis.xin/2019/10/16/bt-frp1/</loc>
+    
+    <lastmod>2021-12-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.myosotis.xin/2021/12/06/hexo-9/</loc>
     
     <lastmod>2021-12-07</lastmod>
     
@@ -20,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/2021/08/25/hexo-8/</loc>
+    <loc>https://blog.myosotis.xin/2021/08/25/hexo-8/</loc>
     
     <lastmod>2021-12-05</lastmod>
     
@@ -29,7 +56,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/2019/06/16/hexo-7/</loc>
+    <loc>https://blog.myosotis.xin/2019/06/16/hexo-7/</loc>
     
     <lastmod>2021-12-04</lastmod>
     
@@ -38,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/links/index.html</loc>
+    <loc>https://blog.myosotis.xin/links/index.html</loc>
     
     <lastmod>2021-09-12</lastmod>
     
@@ -47,7 +74,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/about/index.html</loc>
+    <loc>https://blog.myosotis.xin/about/index.html</loc>
     
     <lastmod>2021-08-25</lastmod>
     
@@ -56,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/2021/08/24/hexo-6/</loc>
+    <loc>https://blog.myosotis.xin/2021/08/24/hexo-6/</loc>
     
     <lastmod>2021-08-25</lastmod>
     
@@ -65,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/2021/07/16/hexo-5/</loc>
+    <loc>https://blog.myosotis.xin/2021/07/16/hexo-5/</loc>
     
     <lastmod>2021-08-25</lastmod>
     
@@ -74,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/2019/06/13/markdown-typora/</loc>
+    <loc>https://blog.myosotis.xin/2019/06/13/markdown-typora/</loc>
     
     <lastmod>2021-08-24</lastmod>
     
@@ -83,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/2019/06/08/vpn/</loc>
+    <loc>https://blog.myosotis.xin/2019/06/08/vpn/</loc>
     
     <lastmod>2021-08-24</lastmod>
     
@@ -92,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/albums/index.html</loc>
+    <loc>https://blog.myosotis.xin/albums/index.html</loc>
     
     <lastmod>2021-06-11</lastmod>
     
@@ -101,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/albums/lmmv.html</loc>
+    <loc>https://blog.myosotis.xin/albums/lmmv.html</loc>
     
     <lastmod>2021-06-11</lastmod>
     
@@ -110,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/2021/06/01/hexo-4/</loc>
+    <loc>https://blog.myosotis.xin/2021/06/01/hexo-4/</loc>
     
     <lastmod>2021-06-11</lastmod>
     
@@ -119,7 +146,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/2021/05/15/hexo-3/</loc>
+    <loc>https://blog.myosotis.xin/2021/05/15/hexo-3/</loc>
     
     <lastmod>2021-06-01</lastmod>
     
@@ -128,7 +155,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/2021/05/15/hexo-1/</loc>
+    <loc>https://blog.myosotis.xin/2021/05/15/hexo-1/</loc>
     
     <lastmod>2021-05-15</lastmod>
     
@@ -137,7 +164,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/2021/05/15/hexo-2/</loc>
+    <loc>https://blog.myosotis.xin/2021/05/15/hexo-2/</loc>
     
     <lastmod>2021-05-15</lastmod>
     
@@ -146,7 +173,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/2021/05/15/hexo/</loc>
+    <loc>https://blog.myosotis.xin/2021/05/15/hexo/</loc>
     
     <lastmod>2021-05-15</lastmod>
     
@@ -155,7 +182,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/2019/07/22/ping-commands/</loc>
+    <loc>https://blog.myosotis.xin/2019/07/22/ping-commands/</loc>
     
     <lastmod>2021-05-15</lastmod>
     
@@ -164,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/2019/07/22/network-commands/</loc>
+    <loc>https://blog.myosotis.xin/2019/07/22/network-commands/</loc>
     
     <lastmod>2021-05-15</lastmod>
     
@@ -173,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/404.html</loc>
+    <loc>https://blog.myosotis.xin/404.html</loc>
     
     <lastmod>2021-05-13</lastmod>
     
@@ -182,7 +209,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/tags/index.html</loc>
+    <loc>https://blog.myosotis.xin/tags/index.html</loc>
     
     <lastmod>2021-05-12</lastmod>
     
@@ -191,7 +218,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/categories/index.html</loc>
+    <loc>https://blog.myosotis.xin/categories/index.html</loc>
     
     <lastmod>2021-05-12</lastmod>
     
@@ -200,7 +227,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/albums/sunset.html</loc>
+    <loc>https://blog.myosotis.xin/albums/sunset.html</loc>
     
     <lastmod>2020-04-18</lastmod>
     
@@ -209,16 +236,7 @@
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/2019/10/16/bt-ftp1/</loc>
-    
-    <lastmod>2019-10-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.myosotis.xin/2019/07/26/one-commands/</loc>
+    <loc>https://blog.myosotis.xin/2019/07/26/one-commands/</loc>
     
     <lastmod>2019-07-25</lastmod>
     
@@ -226,139 +244,151 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://www.myosotis.xin/2019/06/01/hello-world/</loc>
-    
-    <lastmod>2019-07-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
-    <loc>https://www.myosotis.xin/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://www.myosotis.xin/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/tags/edge/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/tags/edge/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/tags/wintows%E4%BC%98%E5%8C%96/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/tags/Windows/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/tags/deepin/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/tags/Docker/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/tags/Windows-to-go/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/tags/RaiDrive/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/tags/Linux-to-go/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/tags/deepin/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/tags/%E6%9C%AC%E5%9C%B0P2P%E4%BC%A0%E8%BE%93/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/tags/Windows-to-go/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/tags/croc/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/tags/Linux-to-go/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/tags/%E5%A1%AB%E5%9D%91/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/tags/wintows%E4%BC%98%E5%8C%96/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/tags/hexo-%E8%BF%81%E7%A7%BB/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/tags/%E6%9C%AC%E5%9C%B0P2P%E4%BC%A0%E8%BE%93/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/tags/%E8%84%B1%E6%9C%BA%E6%89%93%E5%8D%B0/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/tags/croc/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/tags/Markdown/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/tags/%E5%A1%AB%E5%9D%91/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/tags/Typora/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/tags/hexo-%E8%BF%81%E7%A7%BB/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/tags/%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/tags/%E8%84%B1%E6%9C%BA%E6%89%93%E5%8D%B0/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/tags/Cmd/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/tags/%E7%BD%91%E7%BB%9C/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/tags/%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/tags/Cmd/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/tags/VPN/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/tags/%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6/</loc>
+    <lastmod>2021-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.myosotis.xin/tags/Markdown/</loc>
+    <lastmod>2021-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.myosotis.xin/tags/Typora/</loc>
+    <lastmod>2021-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.myosotis.xin/tags/VPN/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -366,78 +396,85 @@
 
   
   <url>
-    <loc>https://www.myosotis.xin/categories/%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/categories/%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/categories/%E4%BD%A0%E5%A5%BD%EF%BC%8C%E4%B8%96%E7%95%8C/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/categories/%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/categories/%E5%B2%9B%E4%B8%BB%E6%8E%A8%E8%8D%90/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/categories/%E5%B0%8F%E8%AF%95%E7%89%9B%E5%88%80/%E6%9C%AC%E5%9C%B0%E6%8C%82%E8%BD%BD%EF%BC%88%E7%BD%91%E7%9B%98%EF%BC%89/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/categories/Hexo/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/Windows%E7%AF%87/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/%E6%B5%8F%E8%A7%88%E5%99%A8-%E4%BC%98%E5%8C%96%E7%AF%87/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/%E6%B5%8F%E8%A7%88%E5%99%A8-%E4%BC%98%E5%8C%96%E7%AF%87/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/Windows%E7%AF%87/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/categories/%E5%B2%9B%E4%B8%BB%E6%8E%A8%E8%8D%90/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/Linux-deepin%E7%AF%87/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/categories/Hexo/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/categories/%E5%B2%9B%E4%B8%BB%E6%8E%A8%E8%8D%90/%E6%9C%AC%E5%9C%B0P2P%E4%BC%A0%E8%BE%93/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/categories/%E5%B0%8F%E5%B2%9B%E8%AF%8A%E6%89%80/Linux-deepin%E7%AF%87/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/categories/%E5%B2%9B%E4%B8%BB%E6%8E%A8%E8%8D%90/VPN/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/categories/%E5%B2%9B%E4%B8%BB%E6%8E%A8%E8%8D%90/%E6%9C%AC%E5%9C%B0P2P%E4%BC%A0%E8%BE%93/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.myosotis.xin/categories/%E5%B2%9B%E4%B8%BB%E6%8E%A8%E8%8D%90/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
-    <lastmod>2021-12-22</lastmod>
+    <loc>https://blog.myosotis.xin/categories/%E5%B2%9B%E4%B8%BB%E6%8E%A8%E8%8D%90/%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
+    <lastmod>2021-12-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.myosotis.xin/categories/%E5%B2%9B%E4%B8%BB%E6%8E%A8%E8%8D%90/VPN/</loc>
+    <lastmod>2021-12-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
