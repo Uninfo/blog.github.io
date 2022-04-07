@@ -5,6 +5,29 @@
     
     <entry>
       <title>Wind挂载阿里云盘（Docker + RaiDrive）</title>
+      <link href="/2022/04/07/hexo-11/"/>
+      <url>/2022/04/07/hexo-11/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer@latest/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="https://cdn.jsdelivr.net/npm/meting@1/dist/Meting.min.js"></script><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote><p>以下是准备工作</p><ol><li>进入Wind 设置（Deepin EFI 引导替换 Wind EFI 引导）</li><li>进入 PE 里设置（设置 EFI 以及 Grub）</li><li>进入 Deepin 设置 （启动项 添加Wind 的引导）</li></ol><p>这边安装的是 deepin linux 20.3v ，状态描述安装成功重启后无法进入deepin系统</p><p>（这边是先安装wind后安装linux）</p></blockquote><span id="more"></span><h2 id="关闭“快速启动”"><a href="#关闭“快速启动”" class="headerlink" title="关闭“快速启动”"></a>关闭“快速启动”</h2><p>关闭 BIOS 的 “Secure Boot”的功能</p><blockquote><p>在默认情况下，UEFI 固件只会加载那些被签名的引导程序。在缺少 Secure Boot 功能的传统 PC 机上，恶意的后门程序可以加载自身，进而摇身一变伪装成一个引导程序。这样的话，BIOS 就会在启动的时候加载后门程序，这样它就可以躲过操作系统，把自己隐藏得很深。<br>但是不得不说，这对我们安装 Linux 造成了很大的困扰，也是直接导致我们重启到 Windows 10 后进不去 Linux 的原因。<br>首先我们要关闭这个功能：进入 BIOS 找到 Secure Boot，选择 disabled，这样就关闭了。当然，有些人进入 BIOS 会发现 Secure Boot 这个选项是灰色的（比如我的就是），这时你需要先给你的 BIOS 设一个密码，然后就能关 Secure Boot 了。</p></blockquote><h2 id="进入Win设置"><a href="#进入Win设置" class="headerlink" title="进入Win设置"></a>进入Win设置</h2><ol><li>进入管理员命令行（cmd），运行以下代码， “Deepin Linux EFI 引导”替换掉“Windows EFI 引导”</li><li><code>bcdedit /set &#123;bootmgr&#125; path \EFI\Manjaro\grubx64.efi</code></li></ol><blockquote><p>开机完后你就会发现原来直接进入 Wnd 系统，现在是直接进入 Linux 系统。</p></blockquote><h2 id="进入PE设置"><a href="#进入PE设置" class="headerlink" title="进入PE设置"></a>进入PE设置</h2><h2 id="进入-Linux-设置"><a href="#进入-Linux-设置" class="headerlink" title="进入 Linux 设置"></a>进入 Linux 设置</h2><p>这一点是我安装 Arch Llinux 的时候发现的，Arch Linux 安装过程是手动安装的，在编写 GRUB 的时候会扫描不到 Windows Manager 所在的分区（当然可能不是所有人都会遇到），所以在 GRUB 界面可能会看不到 Windows Manager 选项，导致进不去 Windows 10，这里就需要手动编辑 GRUB 信息，我们打开 <code>/boot/grub/grub.cfg</code> 文件，发现里面确实没有 Windows 10 的启动信息，在后面加上：</p><pre class="language-shell" data-language="shell"><code class="language-shell">menuentry <span class="token string">"Microsoft Windows 10"</span> <span class="token punctuation">&#123;</span>  insmod part_get  insmod fat  insmod search_fs_uuid  insmod chain  search --fs-uuid --set<span class="token operator">=</span>root <span class="token variable">$hints_string</span> <span class="token variable">$fs_uuid</span>  chainloader /EFI/Microsoft/Boot/bootmgfw.efi<span class="token punctuation">&#125;</span></code></pre><p><strong>注意</strong>：</p><p>这里的 <code>$hints_string</code>，代表的是终端执行命令：</p><pre class="language-none"><code class="language-none">1sudo grub-probe --target&#x3D;hints_string &#x2F;boot&#x2F;efi&#x2F;EFI&#x2F;Microsoft&#x2F;Boot&#x2F;bootmgfw.efi</code></pre><p>后的输出；</p><p>而 <code>$fs_uuid</code> 代表的是：</p><pre class="language-none"><code class="language-none">1sudo grub-probe --target&#x3D;fs_uuid &#x2F;boot&#x2F;efi&#x2F;EFI&#x2F;Microsoft&#x2F;Boot&#x2F;bootmgfw.efi</code></pre><p>的输出。</p><p>然后保存。在终端执行命令：<code>sudo grub-mkconfig -o /boot/grub/grub.cfg</code>，就 OK 了。</p><p>到此，Arch Linux 和 Windows 10 双系统也配置完毕了。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+            <tag> deepin </tag>
+            
+            <tag> 双系统引导 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Wind挂载阿里云盘（Docker + RaiDrive）</title>
       <link href="/2021/12/28/hexo-10/"/>
       <url>/2021/12/28/hexo-10/</url>
       
